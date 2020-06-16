@@ -40,8 +40,7 @@ public class AboutDialog extends javax.swing.JDialog {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
         menuBar1 = new java.awt.MenuBar();
@@ -52,13 +51,14 @@ public class AboutDialog extends javax.swing.JDialog {
         aboutText = new javax.swing.JTextPane();
         okAboutBtn = new javax.swing.JButton();
 
-        menu1.setLabel("File");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("imp/intl/Bundle"); // NOI18N
+        menu1.setLabel(bundle.getString("AboutDialog.menu1.label")); // NOI18N
         menuBar1.add(menu1);
 
-        menu2.setLabel("Edit");
+        menu2.setLabel(bundle.getString("AboutDialog.menu2.label")); // NOI18N
         menuBar1.add(menu2);
 
-        setTitle("about Impro-Visor\n");
+        setTitle(bundle.getString("AboutDialog.title")); // NOI18N
         setFocusCycleRoot(false);
         setName("aboutDialog"); // NOI18N
         getContentPane().setLayout(new java.awt.GridBagLayout());
@@ -71,7 +71,7 @@ public class AboutDialog extends javax.swing.JDialog {
 
         aboutLabel.setFont(new java.awt.Font("Dialog", 3, 36)); // NOI18N
         aboutLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        aboutLabel.setText("Impro-Visor version 10.2");
+        aboutLabel.setText(bundle.getString("AboutDialog.aboutLabel.text")); // NOI18N
         aboutLabel.setMaximumSize(new java.awt.Dimension(400, 100));
         aboutLabel.setMinimumSize(new java.awt.Dimension(400, 15));
         aboutLabel.setPreferredSize(new java.awt.Dimension(400, 15));
@@ -89,7 +89,7 @@ public class AboutDialog extends javax.swing.JDialog {
         aboutText.setBackground(new java.awt.Color(255, 204, 102));
         aboutText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         aboutText.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        aboutText.setText(" Welcome to Improvisation Advisor version 10.2, created by:\n\n Bob Keller, Stephen Jones, Aaron Wolin, David Morrison, Martin Hunt, \n Steven Gomez, Jim Herold, Brandy McMenamy, Sayuri Soejima, Emma Carlson, \n Jon Gillick, Kevin Tang, Stephen Lee, Chad Waters, John Goodman, Lasconic, \n Julia Botev, Michael Carney, Paul Hobbs, Ryan Wieghard, Amos Byon, \n Zachary Merritt, Xanda Schofield, August Toman-Yih, David Halpern,\n Jack Davison, Audrey Musselman-Brown, Kevin Choi, Brian Howell, \n Caitlin Chen, Nicolas Chung, Anna Turner, Hayden Blauzvern, Nate Tarrh,\n Kelly Lee, Brian Kwak, Willem Engen, Eric Chicot, Mark Heimann, \n Nava Dallal, Carli Lessard, Alex Putman, Becki Yukman, Errick Jackson,\n Nathan Kim, Zachary Kondak, Mikayla Konst, Baunnee Martinez,\n Daniel Scanteianu, Amelia Sheppard, David Siah, Mira Jambusaria,\n Adrian Mettler, Gabriel Neer, Erika Rice Sherpelz,  Jeffrey Sherpelz,\n Daniel Johnson, Nicholas Weintraut, Sam Goree, Samantha Long, \n Joseph Yaconelli, Isys Archell Johnson, Cai Glencross, Lukas Gnirke,\n Rachel Goldstein, and Andy Vainauskas.\n \n For further information and tutorial, please visit the website:\n\thttp://www.cs.hmc.edu/~keller/jazz/improvisor\n For more free leadsheets and support, please join our Yahoo! group:\t\n\thttps://groups.yahoo.com/neo/groups/impro-visor/info\n For source code, please see:\t\n\thttps://github.com/Impro-Visor/Impro-Visor\n Copyright (c) 2005-2019, Robert Keller and Harvey Mudd College \n\n This program is FREE software. You can redistribute it and/or modify it\n under the terms of the GNU General Public License as published by the\n Free Software Foundation, either version 2 of the License, or any later\n version. This program is distributed in the hope that it will be useful,\n but WITHOUT ANY WARRANTY; without even the implied warranty of\n merchantability or fitness for a particular purpose.  See the GNU\n General Public License for more details, which may be found at:\n         http://www.gnu.org/licenses/\n We sincerely hope you enjoy using Impro-Visor!\n");
+        aboutText.setText(bundle.getString("AboutDialog.aboutText.text")); // NOI18N
         aboutText.setMinimumSize(new java.awt.Dimension(400, 350));
         aboutText.setPreferredSize(new java.awt.Dimension(400, 350));
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -104,18 +104,15 @@ public class AboutDialog extends javax.swing.JDialog {
         aboutDialogPanel.add(aboutText, gridBagConstraints);
 
         okAboutBtn.setBackground(new java.awt.Color(153, 255, 102));
-        okAboutBtn.setText("Close");
-        okAboutBtn.setToolTipText("Close the About dialog.");
+        okAboutBtn.setText(bundle.getString("AboutDialog.okAboutBtn.text")); // NOI18N
+        okAboutBtn.setToolTipText(bundle.getString("AboutDialog.okAboutBtn.toolTipText")); // NOI18N
         okAboutBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         okAboutBtn.setMaximumSize(new java.awt.Dimension(300, 30));
         okAboutBtn.setMinimumSize(new java.awt.Dimension(300, 30));
-        okAboutBtn.setOpaque(true);
         okAboutBtn.setPreferredSize(new java.awt.Dimension(300, 30));
         okAboutBtn.setSelected(true);
-        okAboutBtn.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        okAboutBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 okAboutBtnActionPerformed(evt);
             }
         });
