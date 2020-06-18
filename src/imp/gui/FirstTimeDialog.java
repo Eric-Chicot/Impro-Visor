@@ -48,8 +48,7 @@ public FirstTimeDialog(Notate notate, boolean modal)
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
         menuBar1 = new java.awt.MenuBar();
@@ -61,13 +60,14 @@ public FirstTimeDialog(Notate notate, boolean modal)
         openMidiPrefsBtn = new javax.swing.JButton();
         okAboutBtn = new javax.swing.JButton();
 
-        menu1.setLabel("File");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("imp/intl/Bundle"); // NOI18N
+        menu1.setLabel(bundle.getString("FirstTimeDialog.menu1.label")); // NOI18N
         menuBar1.add(menu1);
 
-        menu2.setLabel("Edit");
+        menu2.setLabel(bundle.getString("FirstTimeDialog.menu2.label")); // NOI18N
         menuBar1.add(menu2);
 
-        setTitle("about Impro-Visor\n");
+        setTitle(bundle.getString("FirstTimeDialog.title")); // NOI18N
         setFocusCycleRoot(false);
         setName("aboutDialog"); // NOI18N
         getContentPane().setLayout(new java.awt.GridBagLayout());
@@ -81,7 +81,7 @@ public FirstTimeDialog(Notate notate, boolean modal)
         aboutLabel.setBackground(new java.awt.Color(255, 255, 51));
         aboutLabel.setFont(new java.awt.Font("Dialog", 3, 36)); // NOI18N
         aboutLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        aboutLabel.setText("Impro-Visor version 10");
+        aboutLabel.setText(bundle.getString("FirstTimeDialog.aboutLabel.text")); // NOI18N
         aboutLabel.setMaximumSize(new java.awt.Dimension(400, 100));
         aboutLabel.setMinimumSize(new java.awt.Dimension(400, 15));
         aboutLabel.setPreferredSize(new java.awt.Dimension(400, 15));
@@ -98,8 +98,8 @@ public FirstTimeDialog(Notate notate, boolean modal)
         aboutText.setEditable(false);
         aboutText.setBackground(new java.awt.Color(255, 255, 102));
         aboutText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        aboutText.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        aboutText.setText("  Welcome to Improvisation Advisor version 10.\n\n  Tutorials: http://www.cs.hmc.edu/~keller/jazz/improvisor/tutorials.html\n\n  This message will appear only the first time you launch a new version.\n  It can be revisited from the Help menu.\n\n  On first launch, Impro-Visor will copy various files from the\n  installation directory to your home directory, in folder:\n\n       impro-visor-version-10-files\n\n  These include leadsheets, styles, and vocabulary. If you want to preserve \n  files from previous versions, you will need to move or copy them manually. \n  This is so Impro-Visor does not overwrite files that you might have\n  modified. When that directory is present, it tells Impro-Visor not to copy\n  the files on next launch and not to show this message again.\n  \n  To get sound, you may need to set the MIDI Output Preference.\n  (You can use the button below.) It should be set to one of:\n\n        Microsoft GS Wavetable SW Synth  \n        Microsoft MIDI Mapper\n        Gervill\n \n  or some other device or program that supports MIDI input. The latter needs\n  to be running at the time the Impro-Visor is launched, but can be left on.\n\n  Other information can be found in the release notes, in README.txt, and \n  also on the web at https://sourceforge.net/projects/impro-visor/files/\n\n  You can see this message again by Help > Show First-Launch Message.\n ");
+        aboutText.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        aboutText.setText(bundle.getString("FirstTimeDialog.aboutText.text")); // NOI18N
         aboutText.setMinimumSize(new java.awt.Dimension(400, 350));
         aboutText.setPreferredSize(new java.awt.Dimension(400, 350));
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -114,18 +114,15 @@ public FirstTimeDialog(Notate notate, boolean modal)
         aboutDialogPanel.add(aboutText, gridBagConstraints);
 
         openMidiPrefsBtn.setBackground(new java.awt.Color(153, 255, 102));
-        openMidiPrefsBtn.setText("Open MIDI Preferences Now");
-        openMidiPrefsBtn.setToolTipText("Close the About dialog.");
+        openMidiPrefsBtn.setText(bundle.getString("FirstTimeDialog.openMidiPrefsBtn.text")); // NOI18N
+        openMidiPrefsBtn.setToolTipText(bundle.getString("FirstTimeDialog.openMidiPrefsBtn.toolTipText")); // NOI18N
         openMidiPrefsBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         openMidiPrefsBtn.setMaximumSize(new java.awt.Dimension(300, 30));
         openMidiPrefsBtn.setMinimumSize(new java.awt.Dimension(300, 30));
-        openMidiPrefsBtn.setOpaque(true);
         openMidiPrefsBtn.setPreferredSize(new java.awt.Dimension(300, 30));
         openMidiPrefsBtn.setSelected(true);
-        openMidiPrefsBtn.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        openMidiPrefsBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 openMidiPrefsBtnActionPerformed(evt);
             }
         });
@@ -140,18 +137,15 @@ public FirstTimeDialog(Notate notate, boolean modal)
         aboutDialogPanel.add(openMidiPrefsBtn, gridBagConstraints);
 
         okAboutBtn.setBackground(new java.awt.Color(250, 0, 0));
-        okAboutBtn.setText("Close");
-        okAboutBtn.setToolTipText("Close the About dialog.");
+        okAboutBtn.setText(bundle.getString("FirstTimeDialog.okAboutBtn.text")); // NOI18N
+        okAboutBtn.setToolTipText(bundle.getString("FirstTimeDialog.okAboutBtn.toolTipText")); // NOI18N
         okAboutBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         okAboutBtn.setMaximumSize(new java.awt.Dimension(300, 30));
         okAboutBtn.setMinimumSize(new java.awt.Dimension(300, 30));
-        okAboutBtn.setOpaque(true);
         okAboutBtn.setPreferredSize(new java.awt.Dimension(300, 30));
         okAboutBtn.setSelected(true);
-        okAboutBtn.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        okAboutBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 okAboutBtnActionPerformed(evt);
             }
         });
