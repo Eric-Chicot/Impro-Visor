@@ -51,14 +51,14 @@ public class AboutDialog extends javax.swing.JDialog {
         aboutText = new javax.swing.JTextPane();
         okAboutBtn = new javax.swing.JButton();
 
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("imp/intl/Bundle"); // NOI18N
-        menu1.setLabel(bundle.getString("AboutDialog.menu1.label")); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
+        menu1.setLabel(bundle.getString("CommonDialog.menu1.label")); // NOI18N
         menuBar1.add(menu1);
 
-        menu2.setLabel(bundle.getString("AboutDialog.menu2.label")); // NOI18N
+        menu2.setLabel(bundle.getString("CommonDialog.menu2.label")); // NOI18N
         menuBar1.add(menu2);
 
-        setTitle(bundle.getString("AboutDialog.title")); // NOI18N
+        setTitle(bundle.getString("CommonDialog.ImproVisor.title")); // NOI18N
         setFocusCycleRoot(false);
         setName("aboutDialog"); // NOI18N
         getContentPane().setLayout(new java.awt.GridBagLayout());
@@ -71,7 +71,7 @@ public class AboutDialog extends javax.swing.JDialog {
 
         aboutLabel.setFont(new java.awt.Font("Dialog", 3, 36)); // NOI18N
         aboutLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        aboutLabel.setText(bundle.getString("AboutDialog.aboutLabel.text")); // NOI18N
+        aboutLabel.setText(bundle.getString("CommonDialog.ImproVisor.text")); // NOI18N
         aboutLabel.setMaximumSize(new java.awt.Dimension(400, 100));
         aboutLabel.setMinimumSize(new java.awt.Dimension(400, 15));
         aboutLabel.setPreferredSize(new java.awt.Dimension(400, 15));
@@ -88,6 +88,7 @@ public class AboutDialog extends javax.swing.JDialog {
         aboutText.setEditable(false);
         aboutText.setBackground(new java.awt.Color(255, 204, 102));
         aboutText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        aboutText.setContentType(bundle.getString("CommonDialog.contentType")); // NOI18N
         aboutText.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         aboutText.setText(bundle.getString("AboutDialog.aboutText.text")); // NOI18N
         aboutText.setMinimumSize(new java.awt.Dimension(400, 350));
@@ -104,8 +105,8 @@ public class AboutDialog extends javax.swing.JDialog {
         aboutDialogPanel.add(aboutText, gridBagConstraints);
 
         okAboutBtn.setBackground(new java.awt.Color(153, 255, 102));
-        okAboutBtn.setText(bundle.getString("AboutDialog.okAboutBtn.text")); // NOI18N
-        okAboutBtn.setToolTipText(bundle.getString("AboutDialog.okAboutBtn.toolTipText")); // NOI18N
+        okAboutBtn.setText(bundle.getString("CommonDialog.okAboutBtn.text")); // NOI18N
+        okAboutBtn.setToolTipText(bundle.getString("CommonDialog.okAboutBtn.toolTipText")); // NOI18N
         okAboutBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         okAboutBtn.setMaximumSize(new java.awt.Dimension(300, 30));
         okAboutBtn.setMinimumSize(new java.awt.Dimension(300, 30));
