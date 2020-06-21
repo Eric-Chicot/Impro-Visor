@@ -84,6 +84,7 @@ import polya.Formatting;
 import polya.Polylist;
 import polya.PolylistBuffer;
 import polya.Tokenizer;
+import java.util.ResourceBundle;
 
 /**
  *
@@ -109,6 +110,7 @@ public class Notate
         extends javax.swing.JFrame
         implements Constants, MidiPlayListener
 {
+private ResourceBundle bundle2 = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
 public GuideToneLineDialog guideToneLineDialog;
 public static int midiImportXoffset = 200;
 public static int midiImportYoffset = 200;
@@ -9236,7 +9238,7 @@ public void playCurrentSelection(boolean playToEndOfChorus, int loopCount, boole
 private void setToLoop()
   {
     toLoop = true;
-    loopButton.setText("<html><center>Straight</center></html>");
+    loopButton.setText(bundle2.getString("Notate.loopButton.text2"));
     loopButton.setBackground(Color.RED);
   }
 
@@ -9244,7 +9246,7 @@ private void setToNotLoop()
   {
     toLoop = false;
     stopPlaying("set not to Loop");
-    loopButton.setText("<html><center>Loop</center></html>");
+    loopButton.setText(bundle2.getString("Notate.loopButton.text"));
     loopButton.setBackground(Color.GREEN);
   }
 
@@ -15333,17 +15335,16 @@ public int getBreakpoint()
   }
 
 private void setFreezeLayout(Boolean frozen)
-  {
-    java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
+  {    
     if( frozen )
       {
-         freezeLayoutMI.setText(bundle.getString("Notate.freezeLayoutMI.text2"));
+         freezeLayoutMI.setText(bundle2.getString("Notate.freezeLayoutMI.text2"));
          freezeLayoutMI.setSelected(true);
       }
     else
       {
         score.setLayoutList(Polylist.nil);
-        freezeLayoutMI.setText(bundle.getString("Notate.freezeLayoutMI.text"));
+        freezeLayoutMI.setText(bundle2.getString("Notate.freezeLayoutMI.text"));
         freezeLayoutMI.setSelected(false);
       }
   }
@@ -19496,14 +19497,14 @@ public boolean countInCheckboxIsSelected()
           {
             noteColoration = false;
             colorationButton.setBackground(Color.red);
-            colorationButton.setText("<html><center>Color</center></html>");
+            colorationButton.setText(bundle2.getString("Notate.colorationButton.text2"));
             colorationButton.setOpaque(true);
           }
         else
           {
             noteColoration = true;
             colorationButton.setBackground(new Color(153, 204, 255));
-            colorationButton.setText("<html><center>Black&<br>White</center></html>");
+            colorationButton.setText(bundle2.getString("Notate.colorationButton.text"));
             colorationButton.setOpaque(true);
           }
 
@@ -19515,14 +19516,14 @@ public boolean countInCheckboxIsSelected()
           {
             smartEntry = false;
             smartEntryButton.setBackground(Color.red);
-            smartEntryButton.setText("<html><center>Harmonic<br>Entry</center></html>");
+            smartEntryButton.setText(bundle2.getString("Notate.smartEntryButton.text2"));
             smartEntryButton.setOpaque(true);
           }
         else
           {
             smartEntry = true;
             smartEntryButton.setBackground(new Color(255, 153, 255));
-            smartEntryButton.setText("<html><center>Simple<br>Entry</center></html>");
+            smartEntryButton.setText(bundle2.getString("Notate.smartEntryButton.text"));
             smartEntryButton.setOpaque(true);
           }
 }//GEN-LAST:event_smartEntryButtonActionPerformed
@@ -22086,12 +22087,12 @@ private void mostRecentLeadsheetMIActionPerformed(java.awt.event.ActionEvent evt
  * @param evt
  */
 private void populateRecentFileMenu(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_populateRecentFileMenu
-    java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
+    
     RecentFiles recFiles = new RecentFiles();
 
     String filenames[] =
       {
-        bundle.getString("Notate.populateRecentFileMenu.fileName")
+        bundle2.getString("Notate.populateRecentFileMenu.fileName")
       };
 
     if( recFiles.getSize() == 0 )
@@ -22144,7 +22145,7 @@ private void populateRecentFileMenu(javax.swing.event.MenuEvent evt) {//GEN-FIRS
           }
 
         openRecentLeadsheetMenu.add(new JSeparator());
-        JMenuItem clear = new JMenuItem(bundle.getString("Notate.populateRecentFileMenu.clear"));
+        JMenuItem clear = new JMenuItem(bundle2.getString("Notate.populateRecentFileMenu.clear"));
         openRecentLeadsheetMenu.add(clear);
         clear.addActionListener(
                 new ActionListener()
@@ -22175,11 +22176,11 @@ private void mostRecentLeadsheetNewWindowMIActionPerformed(java.awt.event.Action
 }//GEN-LAST:event_mostRecentLeadsheetNewWindowMIActionPerformed
 
 private void populateRecentLeadsheetNewWindow(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_populateRecentLeadsheetNewWindow
-    java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
+    
     RecentFiles recFiles = new RecentFiles();
     String filenames[] =
       {
-        bundle.getString("Notate.populateRecentFileMenu.fileName")
+        bundle2.getString("Notate.populateRecentFileMenu.fileName")
       };
     if( recFiles.getSize() == 0 || recFiles.getSize() == 1 )
       {
@@ -22228,7 +22229,7 @@ private void populateRecentLeadsheetNewWindow(javax.swing.event.MenuEvent evt) {
             openRecentLeadsheetNewWindowMenu.add(item);
           }
         openRecentLeadsheetNewWindowMenu.add(new JSeparator());
-        JMenuItem clear = new JMenuItem(bundle.getString("Notate.populateRecentFileMenu.clear"));
+        JMenuItem clear = new JMenuItem(bundle2.getString("Notate.populateRecentFileMenu.clear"));
         openRecentLeadsheetNewWindowMenu.add(clear);
         clear.addActionListener(
                 new ActionListener()
@@ -24351,11 +24352,12 @@ public void improviseButtonToggled(boolean improvisationOn)
 
 public void improvisationOn()
 {
+    
     improvise = true;
     improviseButton.setSelected(true);
     lickgenFrame.setRecurrent(true);
     improviseButton.setBackground(new Color(255, 0, 0));
-    improviseButton.setText("<html><center>Stop</center></html>");
+    improviseButton.setText(bundle2.getString("Notate.improviseButton.text2"));
     tradeCheckbox.setSelected(false);  
     grammarMenuDialog.improvisationOn();
     grammarEditor.improvisationOn();
@@ -24370,11 +24372,12 @@ public void improvisationOn()
 public void improvisationOff()
   {
     //System.out.println("improvisationOff");
+    
     improvise = false;
     improviseButton.setSelected(false);
     lickgenFrame.setRecurrent(false);
     improviseButton.setBackground(new Color(0, 255, 0));
-    improviseButton.setText("<html><center>Improv</center></html>");
+    improviseButton.setText(bundle2.getString("Notate.improviseButton.text"));
     tradeCheckbox.setSelected(false);
     grammarMenuDialog.improvisationOff();
     grammarEditor.improvisationOff();
