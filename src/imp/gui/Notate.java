@@ -8561,7 +8561,7 @@ public Critic getCritic()
         viewMenu.add(useBeamsMI);
 
         replaceWithPhi.setSelected(true);
-        replaceWithPhi.setText("Use \u03D5 for m7b5");
+        replaceWithPhi.setText(bundle.getString("Notate.replaceWithPhi.text")); // NOI18N
         replaceWithPhi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 replaceWithPhiActionPerformed(evt);
@@ -8570,7 +8570,7 @@ public Critic getCritic()
         viewMenu.add(replaceWithPhi);
 
         replaceWithDelta.setSelected(true);
-        replaceWithDelta.setText("Use \u0394 for M7");
+        replaceWithDelta.setText(bundle.getString("Notate.replaceWithDelta.text")); // NOI18N
         replaceWithDelta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 replaceWithDeltaActionPerformed(evt);
@@ -15334,15 +15334,16 @@ public int getBreakpoint()
 
 private void setFreezeLayout(Boolean frozen)
   {
+    java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
     if( frozen )
       {
-         freezeLayoutMI.setText("Thaw Layout");
+         freezeLayoutMI.setText(bundle.getString("Notate.freezeLayoutMI.text2"));
          freezeLayoutMI.setSelected(true);
       }
     else
       {
         score.setLayoutList(Polylist.nil);
-        freezeLayoutMI.setText("Freeze Layout");
+        freezeLayoutMI.setText(bundle.getString("Notate.freezeLayoutMI.text"));
         freezeLayoutMI.setSelected(false);
       }
   }
@@ -22085,12 +22086,12 @@ private void mostRecentLeadsheetMIActionPerformed(java.awt.event.ActionEvent evt
  * @param evt
  */
 private void populateRecentFileMenu(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_populateRecentFileMenu
-
+    java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
     RecentFiles recFiles = new RecentFiles();
 
     String filenames[] =
       {
-        "No Recent Leadsheets to Open"
+        bundle.getString("Notate.populateRecentFileMenu.fileName")
       };
 
     if( recFiles.getSize() == 0 )
@@ -22143,7 +22144,7 @@ private void populateRecentFileMenu(javax.swing.event.MenuEvent evt) {//GEN-FIRS
           }
 
         openRecentLeadsheetMenu.add(new JSeparator());
-        JMenuItem clear = new JMenuItem("clear all recent history");
+        JMenuItem clear = new JMenuItem(bundle.getString("Notate.populateRecentFileMenu.clear"));
         openRecentLeadsheetMenu.add(clear);
         clear.addActionListener(
                 new ActionListener()
@@ -22174,10 +22175,11 @@ private void mostRecentLeadsheetNewWindowMIActionPerformed(java.awt.event.Action
 }//GEN-LAST:event_mostRecentLeadsheetNewWindowMIActionPerformed
 
 private void populateRecentLeadsheetNewWindow(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_populateRecentLeadsheetNewWindow
+    java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
     RecentFiles recFiles = new RecentFiles();
     String filenames[] =
       {
-        "No Recent Leadsheets to Open"
+        bundle.getString("Notate.populateRecentFileMenu.fileName")
       };
     if( recFiles.getSize() == 0 || recFiles.getSize() == 1 )
       {
@@ -22226,7 +22228,7 @@ private void populateRecentLeadsheetNewWindow(javax.swing.event.MenuEvent evt) {
             openRecentLeadsheetNewWindowMenu.add(item);
           }
         openRecentLeadsheetNewWindowMenu.add(new JSeparator());
-        JMenuItem clear = new JMenuItem("Clear All Recent History");
+        JMenuItem clear = new JMenuItem(bundle.getString("Notate.populateRecentFileMenu.clear"));
         openRecentLeadsheetNewWindowMenu.add(clear);
         clear.addActionListener(
                 new ActionListener()
