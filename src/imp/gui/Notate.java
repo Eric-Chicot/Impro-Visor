@@ -9453,8 +9453,7 @@ private void setStepInputBtn(boolean selected)
   {
     if( selected )
       {
-        stepInputBtn.setText("<html><center>Stop</center></html>");
-
+        stepInputBtn.setText(bundle2.getString("Notate.stepInputBtn.text2"));
         stepInputBtn.setBackground(Color.RED);
         stepInputBtn.setOpaque(true);        
         stopRecording();
@@ -9462,7 +9461,7 @@ private void setStepInputBtn(boolean selected)
       }
     else
       {
-        stepInputBtn.setText("<html><center>Step<br>Input</center></html>");
+        stepInputBtn.setText(bundle2.getString("Notate.stepInputBtn.text"));
         stepInputBtn.setBackground(Color.GREEN);
         setNormalStatus();
       }
@@ -9480,7 +9479,7 @@ private void setStepInputBtn(boolean selected)
  */
 private void turnStepInputOff()
   {
-    stepInputBtn.setText("<html><center>Step<br>Input</center></html>");
+    stepInputBtn.setText(bundle2.getString("Notate.stepInputBtn.text"));
     stepInputBtn.setBackground(Color.GREEN);
     setStepInput(false);
     stepInputBtn.setSelected(false);
@@ -11241,7 +11240,7 @@ private void setMuteAll(boolean muted)
 
         allMuteToolBarBtn.setBackground(Color.red);
 
-        allMuteToolBarBtn.setText("Play");
+        allMuteToolBarBtn.setText(bundle2.getString("Notate.allMuteToolBarBtn.text2"));
       }
     else
       {
@@ -11251,7 +11250,7 @@ private void setMuteAll(boolean muted)
 
         allMuteToolBarBtn.setBackground(Color.green);
 
-        allMuteToolBarBtn.setText("Mute");
+        allMuteToolBarBtn.setText(bundle2.getString("Notate.allMuteToolBarBtn.text"));
       }
 
     mixerMasterVolumeChanged();
@@ -13226,7 +13225,6 @@ private void setNormalStatus()
   }
 
     private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
-
         textEntry.setText("");
     }//GEN-LAST:event_clearButtonActionPerformed
 
