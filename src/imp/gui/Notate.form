@@ -1259,7 +1259,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Styles by Section">
+                  <JTabbedPaneConstraints tabName="Styles par Section">
                     <Property name="tabTitle" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                       <ResourceString bundle="imp/internationalize/Bundle.properties" key="Notate.currentStyleTab.TabConstraints.tabTitle" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
@@ -1558,7 +1558,7 @@
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                        <TitledBorder title="Sub-divisions">
+                        <TitledBorder title="Subdiviser">
                           <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.nWaySplitComboBox.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                           <Font PropertyName="font" name="Lucida Grande" size="11" style="0"/>
                         </TitledBorder>
@@ -1642,7 +1642,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Chorus">
+                  <JTabbedPaneConstraints tabName="Solo">
                     <Property name="tabTitle" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                       <ResourceString bundle="imp/internationalize/Bundle.properties" key="Notate.chorusSpecificPanel.TabConstraints.tabTitle" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
@@ -1756,7 +1756,7 @@
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                        <TitledBorder justification="2" title="Stave Type">
+                        <TitledBorder justification="2" title="Clef">
                           <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.staveButtonPanel.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                           <Font PropertyName="font" name="Lucida Grande" size="13" style="1"/>
                         </TitledBorder>
@@ -1870,7 +1870,7 @@
                       <Properties>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                            <TitledBorder title="Transpose">
+                            <TitledBorder title="Transposer">
                               <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.chorusMelodyTranspositionSpinner.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                             </TitledBorder>
                           </Border>
@@ -1953,7 +1953,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Leadsheet">
+                  <JTabbedPaneConstraints tabName="Partition">
                     <Property name="tabTitle" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                       <ResourceString bundle="imp/internationalize/Bundle.properties" key="Notate.leadsheetSpecificPanel.TabConstraints.tabTitle" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
@@ -2025,6 +2025,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="measuresPerPartLabel">
                   <Properties>
+                    <Property name="horizontalAlignment" type="int" value="4"/>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                       <ResourceString bundle="imp/internationalize/Bundle.properties" key="Notate.measuresPerPartLabel.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
@@ -2378,7 +2379,7 @@
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                        <TitledBorder title="Transpose">
+                        <TitledBorder title="Transposer">
                           <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.leadsheetBassTranspositionSpinner.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </TitledBorder>
                       </Border>
@@ -2455,7 +2456,7 @@
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                        <TitledBorder title="Transpose">
+                        <TitledBorder title="Transposer">
                           <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.leadsheetChordTranspositionSpinner.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </TitledBorder>
                       </Border>
@@ -2530,7 +2531,7 @@
             <Container class="javax.swing.JPanel" name="defaultsTab">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Defaults">
+                  <JTabbedPaneConstraints tabName="D&#xe9;faut">
                     <Property name="tabTitle" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                       <ResourceString bundle="imp/internationalize/Bundle.properties" key="Notate.defaultsTab.TabConstraints.tabTitle" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
@@ -2723,7 +2724,7 @@
                       <Properties>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                            <TitledBorder title="Transpose">
+                            <TitledBorder title="Transposer">
                               <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.globalChordTranspositionSpinner.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                             </TitledBorder>
                           </Border>
@@ -2773,7 +2774,7 @@
                       <Properties>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                            <TitledBorder title="Transpose">
+                            <TitledBorder title="Transposer">
                               <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.globalMelodyTranspositionSpinner.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                             </TitledBorder>
                           </Border>
@@ -2846,7 +2847,7 @@
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                        <TitledBorder justification="2" title="Default Volumes">
+                        <TitledBorder justification="2" title="Volume par d&#xe9;faut">
                           <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.defVolumes.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </TitledBorder>
                       </Border>
@@ -2864,7 +2865,7 @@
                       <Properties>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                            <TitledBorder justification="2" title="All">
+                            <TitledBorder justification="2" title="Tout">
                               <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.defAllPanel.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                               <Font PropertyName="font" name="Arial" size="10" style="0"/>
                             </TitledBorder>
@@ -2912,7 +2913,7 @@
                       <Properties>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                            <TitledBorder justification="2" title="Entry">
+                            <TitledBorder justification="2" title="Entr&#xe9;e">
                               <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.defEntryPanel.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                               <Font PropertyName="font" name="Arial" size="10" style="0"/>
                             </TitledBorder>
@@ -2960,7 +2961,7 @@
                       <Properties>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                            <TitledBorder justification="2" title="Bass">
+                            <TitledBorder justification="2" title="Basse">
                               <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.defBassVolPanel.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                               <Font PropertyName="font" name="Arial" size="10" style="0"/>
                             </TitledBorder>
@@ -3000,7 +3001,7 @@
                       <Properties>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                            <TitledBorder justification="2" title="Drums">
+                            <TitledBorder justification="2" title="Batterie">
                               <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.defDrumVolPanel.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                               <Font PropertyName="font" name="Arial" size="10" style="0"/>
                             </TitledBorder>
@@ -3043,7 +3044,7 @@
                       <Properties>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                            <TitledBorder justification="2" title="Chords">
+                            <TitledBorder justification="2" title="Accords">
                               <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.defChordVolPanel.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                               <Font PropertyName="font" name="Arial" size="10" style="0"/>
                             </TitledBorder>
@@ -4290,7 +4291,7 @@
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                        <TitledBorder title="Select a device for MIDI output">
+                        <TitledBorder title="S&#xe9;lectionner un p&#xe9;riph&#xe9;rique pour la sortie MIDI">
                           <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.midiOutPanel.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </TitledBorder>
                       </Border>
@@ -4351,7 +4352,7 @@
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                        <TitledBorder title="Select a device for MIDI input">
+                        <TitledBorder title="S&#xe9;lectionner un p&#xe9;riph&#xe9;rique pour l&apos;entr&#xe9;e MIDI">
                           <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.midiInPanel.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </TitledBorder>
                       </Border>
@@ -5488,7 +5489,7 @@
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder justification="2" title="All">
+                <TitledBorder justification="2" title="Tout">
                   <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.allPanel.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                   <Font PropertyName="font" name="Arial" size="10" style="0"/>
                 </TitledBorder>
@@ -5561,7 +5562,7 @@
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder justification="2" title="Entry">
+                <TitledBorder justification="2" title="Entr&#xe9;e">
                   <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.entryPanel.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                   <Font PropertyName="font" name="Arial" size="10" style="0"/>
                 </TitledBorder>
@@ -5646,7 +5647,7 @@
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder justification="2" title="Melody">
+                <TitledBorder justification="2" title="M&#xe9;lodie">
                   <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.melodyPanel.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                   <Font PropertyName="font" name="Arial" size="10" style="0"/>
                 </TitledBorder>
@@ -5739,7 +5740,7 @@
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder justification="2" title="Chords">
+                <TitledBorder justification="2" title="Accord">
                   <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.chordPanel.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                   <Font PropertyName="font" name="Arial" size="10" style="0"/>
                 </TitledBorder>
@@ -5831,7 +5832,7 @@
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder justification="2" title="Bass">
+                <TitledBorder justification="2" title="Basse">
                   <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.bassPanel.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                   <Font PropertyName="font" name="Arial" size="10" style="0"/>
                 </TitledBorder>
@@ -5906,7 +5907,7 @@
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder justification="2" title="Channel">
+                <TitledBorder justification="2" title="Canal">
                   <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.bassChannelSpinner.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                   <Font PropertyName="font" name="Arial" size="10" style="0"/>
                 </TitledBorder>
@@ -5929,7 +5930,7 @@
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder justification="2" title="Drums">
+                <TitledBorder justification="2" title="Batterie">
                   <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.drumPanel.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                   <Font PropertyName="font" name="Arial" size="10" style="0"/>
                 </TitledBorder>
@@ -5998,7 +5999,7 @@
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder justification="2" title="Channel">
+                <TitledBorder justification="2" title="Canal">
                   <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.drumChannelSpinner.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                   <Font PropertyName="font" name="Arial" size="10" style="0"/>
                 </TitledBorder>
@@ -10485,7 +10486,7 @@
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder justification="2" title="Lead">
+                    <TitledBorder justification="2" title="&lt;html&gt;&lt;span style=&quot;font-size:0.7em&quot;&gt;Ex&#xe9;cution&lt;/span&gt;&lt;/html&gt;">
                       <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.generationGapSpinner.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                       <Font PropertyName="font" name="Lucida Grande" size="10" style="0"/>
                     </TitledBorder>
@@ -10587,7 +10588,7 @@
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder justification="2" title="Chord Font">
+                    <TitledBorder justification="2" title="Taille Accord">
                       <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.chordFontSizeSpinner.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                       <Font PropertyName="font" name="Lucida Grande" size="10" style="0"/>
                     </TitledBorder>
@@ -10851,7 +10852,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder justification="2" title="Looping">
+                    <TitledBorder justification="2" title="Boucler">
                       <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.loopPanel.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                       <Font PropertyName="font" name="Dialog" size="10" style="0"/>
                     </TitledBorder>
@@ -11219,7 +11220,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder justification="2" title="Playback Location">
+                    <TitledBorder justification="2" title="Position de lecture">
                       <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.playbackPanel.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                       <Font PropertyName="font" name="Dialog" size="10" style="0"/>
                     </TitledBorder>
@@ -11309,7 +11310,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder justification="2" title="Volume &amp; Mixer">
+                    <TitledBorder justification="2" title="Volume &amp; Mixeur">
                       <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.masterVolumePanel.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                       <Font PropertyName="font" name="Dialog" size="10" style="0"/>
                     </TitledBorder>
@@ -11436,7 +11437,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder justification="2" title="Tempo (Beats/Minute) ">
+                    <TitledBorder justification="2" title="Tempo">
                       <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.tempoPanel.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                       <Font PropertyName="font" name="Dialog" size="10" style="0"/>
                     </TitledBorder>
@@ -11523,7 +11524,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder justification="2" title="Bars">
+                    <TitledBorder justification="2" title="Mesures">
                       <ResourceString PropertyName="titleX" bundle="imp/internationalize/Bundle.properties" key="Notate.partBarsPanel.border.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                       <Font PropertyName="font" name="Lucida Grande" size="10" style="0"/>
                     </TitledBorder>

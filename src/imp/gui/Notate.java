@@ -3270,6 +3270,7 @@ public Critic getCritic()
         gridBagConstraints.insets = new java.awt.Insets(10, 5, 5, 5);
         leadsheetSpecificPanel.add(scoreTitleTF, gridBagConstraints);
 
+        measuresPerPartLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         measuresPerPartLabel.setText(bundle.getString("Notate.measuresPerPartLabel.text")); // NOI18N
         measuresPerPartLabel.setMaximumSize(new java.awt.Dimension(200, 16));
         measuresPerPartLabel.setMinimumSize(new java.awt.Dimension(200, 16));
