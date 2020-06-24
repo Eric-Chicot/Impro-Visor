@@ -519,9 +519,12 @@ private SectionTableModel sectionTableModel = new SectionTableModel(
   },
         new String[]
   {
-    "Phrase", "Start", "End", "Bars", "Style",
-    /*"Tempo", "Time Sig.", "Key Sig.",*/
-    "Options"
+    bundle2.getString("Notate.sectionTable.columnModel.title0"),
+    bundle2.getString("Notate.sectionTable.columnModel.title1"),
+    bundle2.getString("Notate.sectionTable.columnModel.title2"),
+    bundle2.getString("Notate.sectionTable.columnModel.title3"),
+    bundle2.getString("Notate.sectionTable.columnModel.title4"),
+    bundle2.getString("Notate.sectionTable.columnModel.title5")    
   });
 private NWaySplitComboBoxModel nWaySplitComboBoxModel = new NWaySplitComboBoxModel();
 private SectionInfo sectionInfo;
@@ -11568,11 +11571,11 @@ private void devicesChanged()
     refreshMidiStatus();
   }
 
-String okMsg = "<html>Status: <em><font color='green'>Device ready</font></em></html>";
-String noDevSelectedMsg = "<html>Status: <em><font color='red'>No Device Selected</font></em></html>";
-String noDev = "<html>No devices found.</html>";
-String failMsgStart = "<html>Status: <em><font color='red'>";
-String failMsgEnd = "</font></em></html>";
+String okMsg = bundle2.getString("Notate.midiStatus.okMsg");
+String noDevSelectedMsg = bundle2.getString("Notate.midiStatus.noDevSelectedMsg");
+String noDev = bundle2.getString("Notate.midiStatus.noDev");
+String failMsgStart = bundle2.getString("Notate.midiStatus.failMsgStart");
+String failMsgEnd = bundle2.getString("Notate.midiStatus.failMsgEnd");
 
 public void refreshMidiStatus()
   {
