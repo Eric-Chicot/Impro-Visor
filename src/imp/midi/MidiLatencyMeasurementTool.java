@@ -66,9 +66,9 @@ public class MidiLatencyMeasurementTool
         public String getColumnName(int col) {
             switch (col) {
                 case 0:
-                    return "Trial";
+                    return bundle2.getString("MidiLatencyMeasurementTool.MeasurementTableModel.text");
                 case 1:
-                    return "Latency";
+                    return bundle2.getString("MidiLatencyMeasurementTool.MeasurementTableModel.text2");
             }
             return "";
         }
