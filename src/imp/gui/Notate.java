@@ -11640,7 +11640,11 @@ public class VoicingTableModel
 
 private final String[] columnNames =
   {
-    "Chord", "Name", "Type", "Voicing", "Extension"
+    bundle2.getString("Notate.VoicingTable.text1"),
+    bundle2.getString("Notate.VoicingTable.text2"),
+    bundle2.getString("Notate.VoicingTable.text3"),
+    bundle2.getString("Notate.VoicingTable.text4"),
+    bundle2.getString("Notate.VoicingTable.text5")
   };
 
 private final Class[] columnClasses =
@@ -16140,17 +16144,17 @@ private void enterMeasuresCore()
               }
             else
               {
-                measErrorLabel.setText("This would exceed the maximum number of " + MAX_MEASURES_PER_LINE);
+                measErrorLabel.setText(bundle2.getString("Notate.measErrorLabel.text1") + MAX_MEASURES_PER_LINE);
               }
           }
         else
           {
-            measErrorLabel.setText("Invalid number!");
+            measErrorLabel.setText(bundle2.getString("Notate.measErrorLabel.text2"));
           }
       }
     catch( NumberFormatException e )
       {
-        measErrorLabel.setText("Invalid number!");
+        measErrorLabel.setText(bundle2.getString("Notate.measErrorLabel.text2"));
       }
   }
 
