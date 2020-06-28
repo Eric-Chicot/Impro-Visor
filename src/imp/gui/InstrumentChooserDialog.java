@@ -24,6 +24,7 @@ import java.awt.event.ActionListener;
 import java.util.Vector;
 import javax.swing.*;
 import javax.swing.border.*;
+import java.util.ResourceBundle;
 
 /**
  *
@@ -32,6 +33,7 @@ import javax.swing.border.*;
 public class InstrumentChooserDialog extends javax.swing.JDialog {
     
     private InstrumentPanel instruments;
+    private ResourceBundle bundle2 = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
     
     /** Creates new form InstrumentChooser2 */
     public InstrumentChooserDialog(java.awt.Dialog parent, boolean modal) {
@@ -118,7 +120,8 @@ public class InstrumentChooserDialog extends javax.swing.JDialog {
 
         buttonPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
-        cancelButton.setText("Cancel");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
+        cancelButton.setText(bundle.getString("InstrumentChooserDialog.cancelButton.text")); // NOI18N
         cancelButton.setDefaultCapable(false);
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,7 +130,7 @@ public class InstrumentChooserDialog extends javax.swing.JDialog {
         });
         buttonPanel.add(cancelButton);
 
-        okButton.setText("OK");
+        okButton.setText(bundle.getString("InstrumentChooserDialog.okButton.text")); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 okButtonActionPerformed(evt);
@@ -141,7 +144,7 @@ public class InstrumentChooserDialog extends javax.swing.JDialog {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         getContentPane().add(buttonPanel, gridBagConstraints);
 
-        selectedPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("selected instrument"));
+        selectedPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(bundle.getString("InstrumentChooserDialog.selectedPanel.border.title"))); // NOI18N
         selectedPanel.setLayout(new java.awt.GridBagLayout());
 
         selectedNumber.setMinimumSize(new java.awt.Dimension(11, 22));
@@ -175,7 +178,7 @@ public class InstrumentChooserDialog extends javax.swing.JDialog {
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 0);
         selectedPanel.add(selectedNumber, gridBagConstraints);
 
-        selectedName.setText("nothing selected");
+        selectedName.setText(bundle.getString("InstrumentChooserDialog.selectedName.text")); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
@@ -344,155 +347,155 @@ public class InstrumentChooserDialog extends javax.swing.JDialog {
         Vector<Group> group = new Vector<Group>();
         Group other = new Group(0, 0, "Other");
 
-        static private final String unknownInstrument = "<unknown instrument>";
+        private final String unknownInstrument = bundle2.getString("InstrumentChooserDialog.Instrument.text0");
 
         private void initInstruments() {
-            addGroup(	1	,	8	,"Piano");
-            addGroup(	9	,	16	,"Chromatic Percussion");
-            addGroup(	17	,	24	,"Organ");
-            addGroup(	25	,	32	,"Guitar");
-            addGroup(	33	,	40	,"Bass");
-            addGroup(	41	,	48	,"Strings");
-            addGroup(	49	,	56	,"Ensemble");
-            addGroup(	57	,	64	,"Brass");
-            addGroup(	65	,	72	,"Reed");
-            addGroup(	73	,	80	,"Pipe");
-            addGroup(	81	,	88	,"Synth Lead");
-            addGroup(	89	,	96	,"Synth Pad");
-            addGroup(	97	,	104	,"Synth Effects");
-            addGroup(	105	,	112	,"Ethnic");
-            addGroup(	113	,	120	,"Percussive");
-            addGroup(	121	,	128	,"Sound Effects");
+            addGroup(	1	,	8	,bundle2.getString("InstrumentChooserDialog.InstrumentGroup.text0"));
+            addGroup(	9	,	16	,bundle2.getString("InstrumentChooserDialog.InstrumentGroup.text1"));
+            addGroup(	17	,	24	,bundle2.getString("InstrumentChooserDialog.InstrumentGroup.text2"));
+            addGroup(	25	,	32	,bundle2.getString("InstrumentChooserDialog.InstrumentGroup.text3"));
+            addGroup(	33	,	40	,bundle2.getString("InstrumentChooserDialog.InstrumentGroup.text4"));
+            addGroup(	41	,	48	,bundle2.getString("InstrumentChooserDialog.InstrumentGroup.text5"));
+            addGroup(	49	,	56	,bundle2.getString("InstrumentChooserDialog.InstrumentGroup.text6"));
+            addGroup(	57	,	64	,bundle2.getString("InstrumentChooserDialog.InstrumentGroup.text7"));
+            addGroup(	65	,	72	,bundle2.getString("InstrumentChooserDialog.InstrumentGroup.text8"));
+            addGroup(	73	,	80	,bundle2.getString("InstrumentChooserDialog.InstrumentGroup.text9"));
+            addGroup(	81	,	88	,bundle2.getString("InstrumentChooserDialog.InstrumentGroup.text10"));
+            addGroup(	89	,	96	,bundle2.getString("InstrumentChooserDialog.InstrumentGroup.text11"));
+            addGroup(	97	,	104	,bundle2.getString("InstrumentChooserDialog.InstrumentGroup.text12"));
+            addGroup(	105	,	112	,bundle2.getString("InstrumentChooserDialog.InstrumentGroup.text13"));
+            addGroup(	113	,	120	,bundle2.getString("InstrumentChooserDialog.InstrumentGroup.text14"));
+            addGroup(	121	,	128	,bundle2.getString("InstrumentChooserDialog.InstrumentGroup.text15"));
 
-            addInstrument(	1	, "Acoustic Grand Piano");
-            addInstrument(	2	, "Bright Acoustic Piano");
-            addInstrument(	3	, "Electric Grand Piano");
-            addInstrument(	4	, "Honky-tonk Piano");
-            addInstrument(	5	, "Electric Piano 1");
-            addInstrument(	6	, "Electric Piano 2");
-            addInstrument(	7	, "Harpsichord");
-            addInstrument(	8	, "Clavi");
-            addInstrument(	9	, "Celesta");
-            addInstrument(	10	, "Glockenspiel");
-            addInstrument(	11	, "Music Box");
-            addInstrument(	12	, "Vibraphone");
-            addInstrument(	13	, "Marimba");
-            addInstrument(	14	, "Xylophone");
-            addInstrument(	15	, "Tubular Bells");
-            addInstrument(	16	, "Dulcimer");
-            addInstrument(	17	, "Drawbar Organ");
-            addInstrument(	18	, "Percussive Organ");
-            addInstrument(	19	, "Rock Organ");
-            addInstrument(	20	, "Church Organ");
-            addInstrument(	21	, "Reed Organ");
-            addInstrument(	22	, "Accordion");
-            addInstrument(	23	, "Harmonica");
-            addInstrument(	24	, "Tango Accordion");
-            addInstrument(	25	, "Acoustic Guitar (nylon)");
-            addInstrument(	26	, "Acoustic Guitar (steel)");
-            addInstrument(	27	, "Electric Guitar (jazz)");
-            addInstrument(	28	, "Electric Guitar (clean)");
-            addInstrument(	29	, "Electric Guitar (muted)");
-            addInstrument(	30	, "Overdriven Guitar");
-            addInstrument(	31	, "Distortion Guitar");
-            addInstrument(	32	, "Guitar harmonics");
-            addInstrument(	33	, "Acoustic Bass");
-            addInstrument(	34	, "Electric Bass (finger)");
-            addInstrument(	35	, "Electric Bass (pick)");
-            addInstrument(	36	, "Fretless Bass");
-            addInstrument(	37	, "Slap Bass 1");
-            addInstrument(	38	, "Slap Bass 2");
-            addInstrument(	39	, "Synth Bass 1");
-            addInstrument(	40	, "Synth Bass 2");
-            addInstrument(	41	, "Violin");
-            addInstrument(	42	, "Viola");
-            addInstrument(	43	, "Cello");
-            addInstrument(	44	, "Contrabass");
-            addInstrument(	45	, "Tremolo Strings");
-            addInstrument(	46	, "Pizzicato Strings");
-            addInstrument(	47	, "Orchestral Harp");
-            addInstrument(	48	, "Timpani");
-            addInstrument(	49	, "String Ensemble 1");
-            addInstrument(	50	, "String Ensemble 2");
-            addInstrument(	51	, "SynthStrings 1");
-            addInstrument(	52	, "SynthStrings 2");
-            addInstrument(	53	, "Choir Aahs");
-            addInstrument(	54	, "Voice Oohs");
-            addInstrument(	55	, "Synth Voice");
-            addInstrument(	56	, "Orchestra Hit");
-            addInstrument(	57	, "Trumpet");
-            addInstrument(	58	, "Trombone");
-            addInstrument(	59	, "Tuba");
-            addInstrument(	60	, "Muted Trumpet");
-            addInstrument(	61	, "French Horn");
-            addInstrument(	62	, "Brass Section");
-            addInstrument(	63	, "SynthBrass 1");
-            addInstrument(	64	, "SynthBrass 2");
-            addInstrument(	65	, "Soprano Sax");
-            addInstrument(	66	, "Alto Sax");
-            addInstrument(	67	, "Tenor Sax");
-            addInstrument(	68	, "Baritone Sax");
-            addInstrument(	69	, "Oboe");
-            addInstrument(	70	, "English Horn");
-            addInstrument(	71	, "Bassoon");
-            addInstrument(	72	, "Clarinet");
-            addInstrument(	73	, "Piccolo");
-            addInstrument(	74	, "Flute");
-            addInstrument(	75	, "Recorder");
-            addInstrument(	76	, "Pan Flute");
-            addInstrument(	77	, "Blown Bottle");
-            addInstrument(	78	, "Shakuhachi");
-            addInstrument(	79	, "Whistle");
-            addInstrument(	80	, "Ocarina");
-            addInstrument(	81	, "Lead 1 (square)");
-            addInstrument(	82	, "Lead 2 (sawtooth)");
-            addInstrument(	83	, "Lead 3 (calliope)");
-            addInstrument(	84	, "Lead 4 (chiff)");
-            addInstrument(	85	, "Lead 5 (charang)");
-            addInstrument(	86	, "Lead 6 (voice)");
-            addInstrument(	87	, "Lead 7 (fifths)");
-            addInstrument(	88	, "Lead 8 (bass + lead)");
-            addInstrument(	89	, "Pad 1 (new age)");
-            addInstrument(	90	, "Pad 2 (warm)");
-            addInstrument(	91	, "Pad 3 (polysynth)");
-            addInstrument(	92	, "Pad 4 (choir)");
-            addInstrument(	93	, "Pad 5 (bowed)");
-            addInstrument(	94	, "Pad 6 (metallic)");
-            addInstrument(	95	, "Pad 7 (halo)");
-            addInstrument(	96	, "Pad 8 (sweep)");
-            addInstrument(	97	, "FX 1 (rain)");
-            addInstrument(	98	, "FX 2 (soundtrack)");
-            addInstrument(	99	, "FX 3 (crystal)");
-            addInstrument(	100	, "FX 4 (atmosphere)");
-            addInstrument(	101	, "FX 5 (brightness)");
-            addInstrument(	102	, "FX 6 (goblins)");
-            addInstrument(	103	, "FX 7 (echoes)");
-            addInstrument(	104	, "FX 8 (sci-fi)");
-            addInstrument(	105	, "Sitar");
-            addInstrument(	106	, "Banjo");
-            addInstrument(	107	, "Shamisen");
-            addInstrument(	108	, "Koto");
-            addInstrument(	109	, "Kalimba");
-            addInstrument(	110	, "Bag pipe");
-            addInstrument(	111	, "Fiddle");
-            addInstrument(	112	, "Shanai");
-            addInstrument(	113	, "Tinkle Bell");
-            addInstrument(	114	, "Agogo");
-            addInstrument(	115	, "Steel Drums");
-            addInstrument(	116	, "Woodblock");
-            addInstrument(	117	, "Taiko Drum");
-            addInstrument(	118	, "Melodic Tom");
-            addInstrument(	119	, "Synth Drum");
-            addInstrument(	120	, "Reverse Cymbal");
-            addInstrument(	121	, "Guitar Fret Noise");
-            addInstrument(	122	, "Breath Noise");
-            addInstrument(	123	, "Seashore");
-            addInstrument(	124	, "Bird Tweet");
-            addInstrument(	125	, "Telephone Ring");
-            addInstrument(	126	, "Helicopter");
-            addInstrument(	127	, "Applause");
-            addInstrument(	128	, "Gunshot");
-        }
+            addInstrument( 1 , bundle2.getString("InstrumentChooserDialog.Instrument.text1"));
+            addInstrument( 2 , bundle2.getString("InstrumentChooserDialog.Instrument.text2"));
+            addInstrument( 3 , bundle2.getString("InstrumentChooserDialog.Instrument.text3"));
+            addInstrument( 4 , bundle2.getString("InstrumentChooserDialog.Instrument.text4"));
+            addInstrument( 5 , bundle2.getString("InstrumentChooserDialog.Instrument.text5"));
+            addInstrument( 6 , bundle2.getString("InstrumentChooserDialog.Instrument.text6"));
+            addInstrument( 7 , bundle2.getString("InstrumentChooserDialog.Instrument.text7"));
+            addInstrument( 8 , bundle2.getString("InstrumentChooserDialog.Instrument.text8"));
+            addInstrument( 9 , bundle2.getString("InstrumentChooserDialog.Instrument.text9"));
+            addInstrument( 10 , bundle2.getString("InstrumentChooserDialog.Instrument.text10"));
+            addInstrument( 11 , bundle2.getString("InstrumentChooserDialog.Instrument.text11"));
+            addInstrument( 12 , bundle2.getString("InstrumentChooserDialog.Instrument.text12"));
+            addInstrument( 13 , bundle2.getString("InstrumentChooserDialog.Instrument.text13"));
+            addInstrument( 14 , bundle2.getString("InstrumentChooserDialog.Instrument.text14"));
+            addInstrument( 15 , bundle2.getString("InstrumentChooserDialog.Instrument.text15"));
+            addInstrument( 16 , bundle2.getString("InstrumentChooserDialog.Instrument.text16"));
+            addInstrument( 17 , bundle2.getString("InstrumentChooserDialog.Instrument.text17"));
+            addInstrument( 18 , bundle2.getString("InstrumentChooserDialog.Instrument.text18"));
+            addInstrument( 19 , bundle2.getString("InstrumentChooserDialog.Instrument.text19"));
+            addInstrument( 20 , bundle2.getString("InstrumentChooserDialog.Instrument.text20"));
+            addInstrument( 21 , bundle2.getString("InstrumentChooserDialog.Instrument.text21"));
+            addInstrument( 22 , bundle2.getString("InstrumentChooserDialog.Instrument.text22"));
+            addInstrument( 23 , bundle2.getString("InstrumentChooserDialog.Instrument.text23"));
+            addInstrument( 24 , bundle2.getString("InstrumentChooserDialog.Instrument.text24"));
+            addInstrument( 25 , bundle2.getString("InstrumentChooserDialog.Instrument.text25"));
+            addInstrument( 26 , bundle2.getString("InstrumentChooserDialog.Instrument.text26"));
+            addInstrument( 27 , bundle2.getString("InstrumentChooserDialog.Instrument.text27"));
+            addInstrument( 28 , bundle2.getString("InstrumentChooserDialog.Instrument.text28"));
+            addInstrument( 29 , bundle2.getString("InstrumentChooserDialog.Instrument.text29"));
+            addInstrument( 30 , bundle2.getString("InstrumentChooserDialog.Instrument.text30"));
+            addInstrument( 31 , bundle2.getString("InstrumentChooserDialog.Instrument.text31"));
+            addInstrument( 32 , bundle2.getString("InstrumentChooserDialog.Instrument.text32"));
+            addInstrument( 33 , bundle2.getString("InstrumentChooserDialog.Instrument.text33"));
+            addInstrument( 34 , bundle2.getString("InstrumentChooserDialog.Instrument.text34"));
+            addInstrument( 35 , bundle2.getString("InstrumentChooserDialog.Instrument.text35"));
+            addInstrument( 36 , bundle2.getString("InstrumentChooserDialog.Instrument.text36"));
+            addInstrument( 37 , bundle2.getString("InstrumentChooserDialog.Instrument.text37"));
+            addInstrument( 38 , bundle2.getString("InstrumentChooserDialog.Instrument.text38"));
+            addInstrument( 39 , bundle2.getString("InstrumentChooserDialog.Instrument.text39"));
+            addInstrument( 40 , bundle2.getString("InstrumentChooserDialog.Instrument.text40"));
+            addInstrument( 41 , bundle2.getString("InstrumentChooserDialog.Instrument.text41"));
+            addInstrument( 42 , bundle2.getString("InstrumentChooserDialog.Instrument.text42"));
+            addInstrument( 43 , bundle2.getString("InstrumentChooserDialog.Instrument.text43"));
+            addInstrument( 44 , bundle2.getString("InstrumentChooserDialog.Instrument.text44"));
+            addInstrument( 45 , bundle2.getString("InstrumentChooserDialog.Instrument.text45"));
+            addInstrument( 46 , bundle2.getString("InstrumentChooserDialog.Instrument.text46"));
+            addInstrument( 47 , bundle2.getString("InstrumentChooserDialog.Instrument.text47"));
+            addInstrument( 48 , bundle2.getString("InstrumentChooserDialog.Instrument.text48"));
+            addInstrument( 49 , bundle2.getString("InstrumentChooserDialog.Instrument.text49"));
+            addInstrument( 50 , bundle2.getString("InstrumentChooserDialog.Instrument.text50"));
+            addInstrument( 51 , bundle2.getString("InstrumentChooserDialog.Instrument.text51"));
+            addInstrument( 52 , bundle2.getString("InstrumentChooserDialog.Instrument.text52"));
+            addInstrument( 53 , bundle2.getString("InstrumentChooserDialog.Instrument.text53"));
+            addInstrument( 54 , bundle2.getString("InstrumentChooserDialog.Instrument.text54"));
+            addInstrument( 55 , bundle2.getString("InstrumentChooserDialog.Instrument.text55"));
+            addInstrument( 56 , bundle2.getString("InstrumentChooserDialog.Instrument.text56"));
+            addInstrument( 57 , bundle2.getString("InstrumentChooserDialog.Instrument.text57"));
+            addInstrument( 58 , bundle2.getString("InstrumentChooserDialog.Instrument.text58"));
+            addInstrument( 59 , bundle2.getString("InstrumentChooserDialog.Instrument.text59"));
+            addInstrument( 60 , bundle2.getString("InstrumentChooserDialog.Instrument.text60"));
+            addInstrument( 61 , bundle2.getString("InstrumentChooserDialog.Instrument.text61"));
+            addInstrument( 62 , bundle2.getString("InstrumentChooserDialog.Instrument.text62"));
+            addInstrument( 63 , bundle2.getString("InstrumentChooserDialog.Instrument.text63"));
+            addInstrument( 64 , bundle2.getString("InstrumentChooserDialog.Instrument.text64"));
+            addInstrument( 65 , bundle2.getString("InstrumentChooserDialog.Instrument.text65"));
+            addInstrument( 66 , bundle2.getString("InstrumentChooserDialog.Instrument.text66"));
+            addInstrument( 67 , bundle2.getString("InstrumentChooserDialog.Instrument.text67"));
+            addInstrument( 68 , bundle2.getString("InstrumentChooserDialog.Instrument.text68"));
+            addInstrument( 69 , bundle2.getString("InstrumentChooserDialog.Instrument.text69"));
+            addInstrument( 70 , bundle2.getString("InstrumentChooserDialog.Instrument.text70"));
+            addInstrument( 71 , bundle2.getString("InstrumentChooserDialog.Instrument.text71"));
+            addInstrument( 72 , bundle2.getString("InstrumentChooserDialog.Instrument.text72"));
+            addInstrument( 73 , bundle2.getString("InstrumentChooserDialog.Instrument.text73"));
+            addInstrument( 74 , bundle2.getString("InstrumentChooserDialog.Instrument.text74"));
+            addInstrument( 75 , bundle2.getString("InstrumentChooserDialog.Instrument.text75"));
+            addInstrument( 76 , bundle2.getString("InstrumentChooserDialog.Instrument.text76"));
+            addInstrument( 77 , bundle2.getString("InstrumentChooserDialog.Instrument.text77"));
+            addInstrument( 78 , bundle2.getString("InstrumentChooserDialog.Instrument.text78"));
+            addInstrument( 79 , bundle2.getString("InstrumentChooserDialog.Instrument.text79"));
+            addInstrument( 80 , bundle2.getString("InstrumentChooserDialog.Instrument.text80"));
+            addInstrument( 81 , bundle2.getString("InstrumentChooserDialog.Instrument.text81"));
+            addInstrument( 82 , bundle2.getString("InstrumentChooserDialog.Instrument.text82"));
+            addInstrument( 83 , bundle2.getString("InstrumentChooserDialog.Instrument.text83"));
+            addInstrument( 84 , bundle2.getString("InstrumentChooserDialog.Instrument.text84"));
+            addInstrument( 85 , bundle2.getString("InstrumentChooserDialog.Instrument.text85"));
+            addInstrument( 86 , bundle2.getString("InstrumentChooserDialog.Instrument.text86"));
+            addInstrument( 87 , bundle2.getString("InstrumentChooserDialog.Instrument.text87"));
+            addInstrument( 88 , bundle2.getString("InstrumentChooserDialog.Instrument.text88"));
+            addInstrument( 89 , bundle2.getString("InstrumentChooserDialog.Instrument.text89"));
+            addInstrument( 90 , bundle2.getString("InstrumentChooserDialog.Instrument.text90"));
+            addInstrument( 91 , bundle2.getString("InstrumentChooserDialog.Instrument.text91"));
+            addInstrument( 92 , bundle2.getString("InstrumentChooserDialog.Instrument.text92"));
+            addInstrument( 93 , bundle2.getString("InstrumentChooserDialog.Instrument.text93"));
+            addInstrument( 94 , bundle2.getString("InstrumentChooserDialog.Instrument.text94"));
+            addInstrument( 95 , bundle2.getString("InstrumentChooserDialog.Instrument.text95"));
+            addInstrument( 96 , bundle2.getString("InstrumentChooserDialog.Instrument.text96"));
+            addInstrument( 97 , bundle2.getString("InstrumentChooserDialog.Instrument.text97"));
+            addInstrument( 98 , bundle2.getString("InstrumentChooserDialog.Instrument.text98"));
+            addInstrument( 99 , bundle2.getString("InstrumentChooserDialog.Instrument.text99"));
+            addInstrument( 100 , bundle2.getString("InstrumentChooserDialog.Instrument.text100"));
+            addInstrument( 101 , bundle2.getString("InstrumentChooserDialog.Instrument.text101"));
+            addInstrument( 102 , bundle2.getString("InstrumentChooserDialog.Instrument.text102"));
+            addInstrument( 103 , bundle2.getString("InstrumentChooserDialog.Instrument.text103"));
+            addInstrument( 104 , bundle2.getString("InstrumentChooserDialog.Instrument.text104"));
+            addInstrument( 105 , bundle2.getString("InstrumentChooserDialog.Instrument.text105"));
+            addInstrument( 106 , bundle2.getString("InstrumentChooserDialog.Instrument.text106"));
+            addInstrument( 107 , bundle2.getString("InstrumentChooserDialog.Instrument.text107"));
+            addInstrument( 108 , bundle2.getString("InstrumentChooserDialog.Instrument.text108"));
+            addInstrument( 109 , bundle2.getString("InstrumentChooserDialog.Instrument.text109"));
+            addInstrument( 110 , bundle2.getString("InstrumentChooserDialog.Instrument.text110"));
+            addInstrument( 111 , bundle2.getString("InstrumentChooserDialog.Instrument.text111"));
+            addInstrument( 112 , bundle2.getString("InstrumentChooserDialog.Instrument.text112"));
+            addInstrument( 113 , bundle2.getString("InstrumentChooserDialog.Instrument.text113"));
+            addInstrument( 114 , bundle2.getString("InstrumentChooserDialog.Instrument.text114"));
+            addInstrument( 115 , bundle2.getString("InstrumentChooserDialog.Instrument.text115"));
+            addInstrument( 116 , bundle2.getString("InstrumentChooserDialog.Instrument.text116"));
+            addInstrument( 117 , bundle2.getString("InstrumentChooserDialog.Instrument.text117"));
+            addInstrument( 118 , bundle2.getString("InstrumentChooserDialog.Instrument.text118"));
+            addInstrument( 119 , bundle2.getString("InstrumentChooserDialog.Instrument.text119"));
+            addInstrument( 120 , bundle2.getString("InstrumentChooserDialog.Instrument.text120"));
+            addInstrument( 121 , bundle2.getString("InstrumentChooserDialog.Instrument.text121"));
+            addInstrument( 122 , bundle2.getString("InstrumentChooserDialog.Instrument.text122"));
+            addInstrument( 123 , bundle2.getString("InstrumentChooserDialog.Instrument.text123"));
+            addInstrument( 124 , bundle2.getString("InstrumentChooserDialog.Instrument.text124"));
+            addInstrument( 125 , bundle2.getString("InstrumentChooserDialog.Instrument.text125"));
+            addInstrument( 126 , bundle2.getString("InstrumentChooserDialog.Instrument.text126"));
+            addInstrument( 127 , bundle2.getString("InstrumentChooserDialog.Instrument.text127"));
+            addInstrument( 128 , bundle2.getString("InstrumentChooserDialog.Instrument.text128"));
+ 	}
 
         private void addGroup(int indexStart, int indexEnd, String name) {
             group.add(new Group(indexStart, indexEnd, name));
