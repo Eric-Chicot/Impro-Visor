@@ -1153,20 +1153,20 @@ public Notate(Score score, Advisor adv, ImproVisor impro, int x, int y)
 
     public static int quantum[] = {20, 30, 40, 60, 120, 180, 240, 360, 480};
     
-    public static String quantumString[] =             
+    public String quantumString[] =             
       {
-          "sixteenth note triplet",
-          "sixteenth note",
-          "eighth note triplet",
-          "eighth note",
-          "quarternote ",
-          "dotted quarter note",
-          "half note",
-          "dotted half note",
-          "whole note"          
+          bundle2.getString("Notate.quantumString.text1"),
+          bundle2.getString("Notate.quantumString.text2"),
+          bundle2.getString("Notate.quantumString.text3"),
+          bundle2.getString("Notate.quantumString.text4"),
+          bundle2.getString("Notate.quantumString.text5"),
+          bundle2.getString("Notate.quantumString.text6"),
+          bundle2.getString("Notate.quantumString.text7"),
+          bundle2.getString("Notate.quantumString.text8"),
+          bundle2.getString("Notate.quantumString.text9")          
       };
 
-static String intialQuantumString = "eighth note";
+ String intialQuantumString = bundle2.getString("Notate.quantumString.text4");
     
 
 public String[] getQuantumString()

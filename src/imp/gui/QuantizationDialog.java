@@ -19,6 +19,7 @@
  */
 
 package imp.gui;
+import java.util.ResourceBundle;
 
 /**
  * @author keller
@@ -26,6 +27,7 @@ package imp.gui;
 public class QuantizationDialog extends javax.swing.JDialog
   {
   Notate notate;
+  private ResourceBundle bundle2 = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
     /**
      * Creates new form QuantizationDialog
      */
@@ -46,8 +48,7 @@ public class QuantizationDialog extends javax.swing.JDialog
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
         eighthNoteSwingBox = new javax.swing.JCheckBox();
@@ -58,7 +59,8 @@ public class QuantizationDialog extends javax.swing.JDialog
         pauseBtn = new javax.swing.JToggleButton();
         stopBtn = new javax.swing.JButton();
 
-        setTitle("Requantization");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
+        setTitle(bundle.getString("QuantizationDialog.title")); // NOI18N
         setAlwaysOnTop(true);
         setBounds(new java.awt.Rectangle(650, 25, 0, 0));
         setLocation(new java.awt.Point(625, 25));
@@ -67,15 +69,13 @@ public class QuantizationDialog extends javax.swing.JDialog
         setPreferredSize(new java.awt.Dimension(450, 150));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
-        eighthNoteSwingBox.setText("Swing Eighth-Notes");
-        eighthNoteSwingBox.setToolTipText("");
+        eighthNoteSwingBox.setText(bundle.getString("QuantizationDialog.eighthNoteSwingBox.text")); // NOI18N
+        eighthNoteSwingBox.setToolTipText(bundle.getString("QuantizationDialog.eighthNoteSwingBox.toolTipText")); // NOI18N
         eighthNoteSwingBox.setMaximumSize(new java.awt.Dimension(158, 50));
         eighthNoteSwingBox.setMinimumSize(new java.awt.Dimension(158, 50));
         eighthNoteSwingBox.setPreferredSize(new java.awt.Dimension(158, 50));
-        eighthNoteSwingBox.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        eighthNoteSwingBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 eighthNoteSwingBoxActionPerformed(evt);
             }
         });
@@ -87,8 +87,8 @@ public class QuantizationDialog extends javax.swing.JDialog
         getContentPane().add(eighthNoteSwingBox, gridBagConstraints);
 
         quantizeButton.setBackground(new java.awt.Color(0, 255, 0));
-        quantizeButton.setText("Requantize to New Chorus");
-        quantizeButton.setToolTipText("Requantize the current chorus according to the set parameters, resulting in a new chorus that will be added at the end.");
+        quantizeButton.setText(bundle.getString("QuantizationDialog.quantizeButton.text")); // NOI18N
+        quantizeButton.setToolTipText(bundle.getString("QuantizationDialog.quantizeButton.toolTipText")); // NOI18N
         quantizeButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         quantizeButton.setContentAreaFilled(false);
         quantizeButton.setMargin(new java.awt.Insets(0, 2, 4, 2));
@@ -96,10 +96,8 @@ public class QuantizationDialog extends javax.swing.JDialog
         quantizeButton.setMinimumSize(new java.awt.Dimension(210, 45));
         quantizeButton.setOpaque(true);
         quantizeButton.setPreferredSize(new java.awt.Dimension(210, 45));
-        quantizeButton.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        quantizeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 quantizeButtonActionPerformed(evt);
             }
         });
@@ -111,60 +109,53 @@ public class QuantizationDialog extends javax.swing.JDialog
         getContentPane().add(quantizeButton, gridBagConstraints);
 
         quantizationSpinner.setModel(new javax.swing.SpinnerListModel(new String[] {"Item 0", "Item 1", "Item 2", "Item 3"}));
-        quantizationSpinner.setBorder(javax.swing.BorderFactory.createTitledBorder("Quantization Level"));
+        quantizationSpinner.setBorder(javax.swing.BorderFactory.createTitledBorder(bundle.getString("QuantizationDialog.quantizationSpinner.border.title"))); // NOI18N
         quantizationSpinner.setMinimumSize(new java.awt.Dimension(250, 50));
-        quantizationSpinner.setOpaque(true);
         quantizationSpinner.setPreferredSize(new java.awt.Dimension(250, 50));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         getContentPane().add(quantizationSpinner, gridBagConstraints);
 
-        playPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Play | Pause | Stop"));
+        playPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(bundle.getString("QuantizationDialog.playPanel.border.title"))); // NOI18N
         playPanel.setMaximumSize(new java.awt.Dimension(32767, 60));
         playPanel.setMinimumSize(new java.awt.Dimension(160, 60));
         playPanel.setPreferredSize(new java.awt.Dimension(100, 60));
 
         playBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imp/gui/graphics/toolbar/play.gif"))); // NOI18N
-        playBtn.setToolTipText("Play the entire leadsheet, starting with the first chorus.\nTo play just the current chorus, select the first beat of that chorus and press Shift-Enter.");
+        playBtn.setToolTipText(bundle.getString("QuantizationDialog.playBtn.toolTipText")); // NOI18N
         playBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         playBtn.setMaximumSize(new java.awt.Dimension(30, 30));
         playBtn.setMinimumSize(new java.awt.Dimension(30, 30));
         playBtn.setPreferredSize(new java.awt.Dimension(30, 30));
-        playBtn.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        playBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 playBtnActionPerformed(evt);
             }
         });
         playPanel.add(playBtn);
 
         pauseBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imp/gui/graphics/toolbar/pause.gif"))); // NOI18N
-        pauseBtn.setToolTipText("Pause or resume playback.");
+        pauseBtn.setToolTipText(bundle.getString("QuantizationDialog.pauseBtn.toolTipText")); // NOI18N
         pauseBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         pauseBtn.setMaximumSize(new java.awt.Dimension(30, 30));
         pauseBtn.setMinimumSize(new java.awt.Dimension(30, 30));
         pauseBtn.setPreferredSize(new java.awt.Dimension(30, 30));
-        pauseBtn.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        pauseBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pauseBtnActionPerformed(evt);
             }
         });
         playPanel.add(pauseBtn);
 
         stopBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imp/gui/graphics/toolbar/stop.gif"))); // NOI18N
-        stopBtn.setToolTipText("Stop playback.");
+        stopBtn.setToolTipText(bundle.getString("QuantizationDialog.stopBtn.toolTipText")); // NOI18N
         stopBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         stopBtn.setMaximumSize(new java.awt.Dimension(30, 30));
         stopBtn.setMinimumSize(new java.awt.Dimension(30, 30));
         stopBtn.setPreferredSize(new java.awt.Dimension(30, 30));
-        stopBtn.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        stopBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 stopBtnActionPerformed(evt);
             }
         });
@@ -182,20 +173,20 @@ public class QuantizationDialog extends javax.swing.JDialog
     
    static int quantum[] = {20, 30, 40, 60, 120, 180, 240, 360, 480};
     
-    static String quantumString[] =             
+    String quantumString[] =             
       {
-          "sixteenth note triplet",
-          "sixteenth note",
-          "eighth note triplet",
-          "eighth note",
-          "quarternote ",
-          "dotted quarter note",
-          "half note",
-          "dotted half note",
-          "whole note"          
+          bundle2.getString("Notate.quantumString.text1"),
+          bundle2.getString("Notate.quantumString.text2"),
+          bundle2.getString("Notate.quantumString.text3"),
+          bundle2.getString("Notate.quantumString.text4"),
+          bundle2.getString("Notate.quantumString.text5"),
+          bundle2.getString("Notate.quantumString.text6"),
+          bundle2.getString("Notate.quantumString.text7"),
+          bundle2.getString("Notate.quantumString.text8"),
+          bundle2.getString("Notate.quantumString.text9")          
       };
     
-    static String intialQuantumString = "eighth note";
+    String intialQuantumString = bundle2.getString("Notate.quantumString.text4");
     
     public boolean getSwing()
     {
