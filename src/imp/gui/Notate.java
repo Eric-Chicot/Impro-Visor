@@ -14030,13 +14030,13 @@ public void closeWindow()
 
             Object[] options =
               {
-                "<html><b><u>Y</u>es</b>, save modifications.</html>",
-                "<html><b><u>N</u>o</b>, do not save modifications.</html>",
-                "<html><b>Cancel</b>, do not close this leadsheet.</html>"
+                bundle2.getString("UnsavedChanges.text1"),
+                bundle2.getString("UnsavedChanges.text2"),
+                bundle2.getString("UnsavedChanges.text3")
               };
 
             UnsavedChanges dialog = new UnsavedChanges(this,
-                                                       "Save changes before closing?", options);
+                                                       bundle2.getString("UnsavedChanges.shortmsg.text"), options);
 
             dialog.setVisible(true);
 
@@ -18710,9 +18710,9 @@ public void openLeadsheet(boolean openCorpus)
 
                     Object[] options =
                       {
-                        "<html><b><u>Y</u>es</b>, save these modifications</html>",
-                        "<html><b><u>N</u>o</b>, do not save these modifications</html>",
-                        "<html><b>Cancel</b>, do not open a different leadsheet</html>"
+                        bundle2.getString("UnsavedChanges.text1"),
+                        bundle2.getString("UnsavedChanges.text2"),
+                        bundle2.getString("UnsavedChanges.text3")
                       };
 
                     UnsavedChanges dialog =
