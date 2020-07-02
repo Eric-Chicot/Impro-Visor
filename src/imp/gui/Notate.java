@@ -797,7 +797,7 @@ public Notate(Score score, Advisor adv, ImproVisor impro, int x, int y)
     
     saveLSFC = new JFileChooser();
 
-    saveAWT = new FileDialog(this, "Save Leadsheet As...", FileDialog.SAVE);
+    saveAWT = new FileDialog(this, bundle2.getString("Notate.saveAWT.text"), FileDialog.SAVE);
 
     revertLSFC = new JFileChooser();
 
@@ -867,14 +867,14 @@ public Notate(Score score, Advisor adv, ImproVisor impro, int x, int y)
 
     lsOpenPreview = new LeadsheetPreview(openLSFC);
 
-    lsOpenPreview.getCheckbox().setText("Open in new window");
+    lsOpenPreview.getCheckbox().setText(bundle2.getString("Notate.lsOpenPreview.text"));
 
 
     openLSFC.setCurrentDirectory(ImproVisor.getLeadsheetDirectory());
 
     openLSFC.setDialogType(JFileChooser.OPEN_DIALOG);
 
-    openLSFC.setDialogTitle("Open Leadsheet");
+    openLSFC.setDialogTitle(bundle2.getString("Notate.openLSFC.title"));
 
     openLSFC.setFileSelectionMode(JFileChooser.FILES_ONLY);
 
@@ -894,7 +894,7 @@ public Notate(Score score, Advisor adv, ImproVisor impro, int x, int y)
 
     saveLSFC.setDialogType(JFileChooser.SAVE_DIALOG);
 
-    saveLSFC.setDialogTitle("Save Leadsheet As");
+    saveLSFC.setDialogTitle(bundle2.getString("Notate.saveLSFC.title"));
 
     saveLSFC.setFileSelectionMode(JFileChooser.FILES_ONLY);
 
@@ -912,7 +912,7 @@ public Notate(Score score, Advisor adv, ImproVisor impro, int x, int y)
 
     revertLSFC.setDialogType(JFileChooser.CUSTOM_DIALOG);
 
-    revertLSFC.setDialogTitle("Revert without saving?");
+    revertLSFC.setDialogTitle(bundle2.getString("Notate.revertLSFC.title"));
 
     revertLSFC.setFileSelectionMode(JFileChooser.FILES_ONLY);
 
@@ -10526,57 +10526,57 @@ public void setMode(Mode mode, String modifier)
     switch( mode )
       {
         case NORMAL:
-            setStatus("Stopped, " + getRedNotes());
+            setStatus(bundle2.getString("Notate.setModel.setStatus.text1") + getRedNotes());
             break;
         case RECORDING:
-            setStatus("Chorus " + recurrentIteration);
+            setStatus(bundle2.getString("Notate.setModel.setStatus.text2") + recurrentIteration);
             recurrentIteration++;
             break;
         case STEP_INPUT:
-            setStatus("Step-recording.");
+            setStatus(bundle2.getString("Notate.setModel.setStatus.text3"));
             break;
         case DRAWING:
-            setStatus("Draw notes with the mouse (set slots first).");
+            setStatus(bundle2.getString("Notate.setModel.setStatus.text4"));
             break;
         case GENERATING:
-            setStatus("Generating chorus "+ recurrentIteration);
+            setStatus(bundle2.getString("Notate.setModel.setStatus.text5") + recurrentIteration);
             recurrentIteration++;
             break;
         case GENERATED:
-            setStatus("Using " + modifier);
+            setStatus(bundle2.getString("Notate.setModel.setStatus.text6") + modifier);
             break;
         case ROADMAP:
-            setStatus("Creating Roadmap");
+            setStatus(bundle2.getString("Notate.setModel.setStatus.text7"));
             break;
         case ROADMAP_DONE:
-            setStatus("Roadmap Created");
+            setStatus(bundle2.getString("Notate.setModel.setStatus.text8"));
             break;
         case ADVICE:
-            setStatus("Select Advice.");
+            setStatus(bundle2.getString("Notate.setModel.setStatus.text9"));
             break;
         case LEADSHEET_SAVED:
-            setStatus("Leadsheet Saved");
+            setStatus(bundle2.getString("Notate.setModel.setStatus.text10"));
             break;
         case STYLE_EDIT:
-            setStatus("Editing Style");
+            setStatus(bundle2.getString("Notate.setModel.setStatus.text11"));
             break;
         case EDIT_LEADSHEET:
-            setStatus("Edit leadsheet textually");
+            setStatus(bundle2.getString("Notate.setModel.setStatus.text12"));
             break;
         case PLAYING:
-            setStatus("Playing, " + getRedNotes());
+            setStatus(bundle2.getString("Notate.setModel.setStatus.text13") + getRedNotes());
             break;
         case PLAYING_PAUSED:
-            setStatus("Playing Paused, " + getRedNotes());
+            setStatus(bundle2.getString("Notate.setModel.setStatus.text14") + getRedNotes());
             break;
         case IMPORTING_MIDI:
-            setStatus("Importing MIDI");
+            setStatus(bundle2.getString("Notate.setModel.setStatus.text15"));
             break;
         case IMPROVISING:
-            setStatus("Improvising " + modifier);
+            setStatus(bundle2.getString("Notate.setModel.setStatus.text16") + modifier);
             break;
         case IMPROVISATION_SAVED:
-            setStatus(getRedNotes() + " Improvisation saved in " + modifier);
+            setStatus(getRedNotes() + bundle2.getString("Notate.setModel.setStatus.text17") + modifier);
             break;
       }
 
@@ -12283,14 +12283,14 @@ public void setPartBars(String text)
       {
         // Lengthening score is always ok.
         setBars(scoreBarLength);
-        setStatus("Chorus length set to " + scoreBarLength);
+        setStatus(bundle2.getString("Notate.setModel.setStatus.text18") + scoreBarLength);
         repaintAndStaveRequestFocus();
         return;
       }
 
     if( scoreBarLength < 1 )
       {
-        setStatus("Invalid Action");
+        setStatus(bundle2.getString("Notate.setModel.setStatus.text19"));
         return;
       }
 
@@ -12310,7 +12310,7 @@ public void setPartBars(String text)
     else
       {
         setBars(scoreBarLength);
-        setStatus("Chorus length set to " + scoreBarLength);
+        setStatus(bundle2.getString("Notate.setModel.setStatus.text18") + scoreBarLength);
       }
     repaintAndStaveRequestFocus();
   }
@@ -13125,7 +13125,7 @@ public void openSaveLickFrame()
 
     adviceDialog.setVisible(false);        // avoid interference of key strokes
 
-    setStatus("Edit save information.");
+    setStatus(bundle2.getString("Notate.setModel.setStatus.text20"));
 
     disableAccelerators();
     
@@ -13140,7 +13140,7 @@ public void openSaveLickFrame(String string)
 
     adviceDialog.setVisible(false);        // avoid interference of key strokes
 
-    setStatus("Edit save information.");
+    setStatus(bundle2.getString("Notate.setModel.setStatus.text20"));
 
     disableAccelerators();
     
