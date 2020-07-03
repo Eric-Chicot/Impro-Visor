@@ -26,6 +26,7 @@ import imp.util.ErrorLog;
 import imp.util.SplashDialog;
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.ResourceBundle;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 import polya.Polylist;
@@ -41,6 +42,8 @@ import polya.Tokenizer;
  */
 public class LoadAdviceCommand implements Command, Runnable {
 
+    private ResourceBundle bundle2 = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
+    
     /** 
      * the File to open
      */
@@ -117,7 +120,7 @@ public class LoadAdviceCommand implements Command, Runnable {
         Object prevOb = null;
         String typeOfItemLoaded = "";
         
-        ld.setText("Loading Vocabulary ...");
+        ld.setText(bundle2.getString("Improvisor.loadAdvice.text"));
         ld.repaint();
 
         while( (ob = in.nextSexp()) != Tokenizer.eof ) {

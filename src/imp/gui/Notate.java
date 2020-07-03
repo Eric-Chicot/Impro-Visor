@@ -14018,7 +14018,7 @@ public boolean unsavedChanges()
 
 public void closeWindow()
   {
-
+    
     boolean redisplay = true;
 
     while( redisplay )
@@ -18421,11 +18421,13 @@ public boolean playingPaused()
 
         Object[] options =
           {
-            "Yes", "No"
+            bundle2.getString("CommonDialog.yesBtn.text"),
+            bundle2.getString("CommonDialog.noBtn.text")
           };
 
         int choice = JOptionPane.showOptionDialog(this,
-                                                  "Do you wish to quit Impro-Visor?", "Quit",
+                                                  bundle2.getString("Notate.quitMIActionPerformed.text1"),
+                                                  bundle2.getString("Notate.quitMIActionPerformed.text2"),
                                                   JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,
                                                   null, options, options[0]);
 
@@ -24488,9 +24490,9 @@ public void fileStepForward()
 
                 Object[] options =
                   {
-                    "<html><b><u>Y</u>es</b>, save these modifications</html>",
-                    "<html><b><u>N</u>o</b>, do not save these modifications</html>",
-                    "<html><b>Cancel</b>, do not open a different leadsheet</html>"
+                    bundle2.getString("UnsavedChanges.text1"),
+                    bundle2.getString("UnsavedChanges.text2"),
+                    bundle2.getString("UnsavedChanges.text3")
                   };
 
                 UnsavedChanges dialog =
@@ -24569,9 +24571,9 @@ public void fileStepBackward()
 
                 Object[] options =
                   {
-                    "<html><b><u>Y</u>es</b>, save these modifications</html>",
-                    "<html><b><u>N</u>o</b>, do not save these modifications</html>",
-                    "<html><b>Cancel</b>, do not open a different leadsheet</html>"
+                    bundle2.getString("UnsavedChanges.text1"),
+                    bundle2.getString("UnsavedChanges.text2"),
+                    bundle2.getString("UnsavedChanges.text3")
                   };
 
                 UnsavedChanges dialog =
@@ -24743,7 +24745,7 @@ public String getRhythmClusterName(){
 private void setGrammarName(String grammarName)
 {
     grammarMenuDialog.setGrammarName(grammarName);
-    grammarRadio.setText("Use grammar " + grammarName);
+    grammarRadio.setText(bundle2.getString("Notate.grammarRadio.text") + grammarName);
     if( lickgenFrame != null )
       {
         lickgenFrame.setGrammarName(grammarName);

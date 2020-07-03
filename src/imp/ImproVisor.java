@@ -36,6 +36,7 @@ import java.io.IOException;
 import javax.sound.midi.InvalidMidiDataException;
 import polya.*;
 import imp.osc.*;
+import java.util.ResourceBundle;
 
 /**
  * Impro-Visor main class
@@ -69,6 +70,7 @@ public class ImproVisor implements Constants {
     private static MidiManager midiManager;
     public static AutomaticVoicingSettings avs;
     public static boolean override;
+    private ResourceBundle bundle2 = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
     
     private static Color windowFrameColor = new Color(230, 230, 230);
      
@@ -325,7 +327,7 @@ private ImproVisor(String leadsheet)
     loadAdvice = new LoadAdviceCommand(ruleFile, advisor, null, true, false);
 
 
-    loadAdvice.setLoadDialogText("Loading Vocabulary ...");
+    loadAdvice.setLoadDialogText(bundle2.getString("Improvisor.loadAdvice.text"));
     loadAdvice.execute();
 
     synchronized(loadAdvice)
