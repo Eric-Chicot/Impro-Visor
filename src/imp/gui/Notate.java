@@ -9417,9 +9417,7 @@ public void toCritic()
   {
     if( lickgenFrame.toCriticSelected() )
       {
-        String s = JOptionPane.showInputDialog("<html><div style=\"text-align: center;\">"
-                + "Select the number of measures<br/>"
-                + "for the graded licks", 2);
+        String s = JOptionPane.showInputDialog(bundle2.getString("Notate.toCritic.Dialog.text1"), 2);
 
         if( s != null && s.length() > 0 )
           {
@@ -9428,9 +9426,7 @@ public void toCritic()
                   measureNum = Integer.parseInt(s);
               } catch (NumberFormatException e) {
                   JOptionPane.showMessageDialog(null,
-                          new JLabel("<html><div style=\"text-align: center;\">"
-                                  + "Could not understand input,<br/>"
-                                  + "setting number of measures to 2."),
+                          new JLabel(bundle2.getString("Notate.toCritic.Dialog.text2")),
                           "Alert", JOptionPane.PLAIN_MESSAGE);
                   measureNum = 2;
               }
@@ -24497,7 +24493,7 @@ public void fileStepForward()
 
                 UnsavedChanges dialog =
                         new UnsavedChanges(this,
-                                           "Save modifications?",
+                                           bundle2.getString("UnsavedChanges.text4"),
                                            options);
 
                 dialog.setVisible(true);
@@ -24578,7 +24574,7 @@ public void fileStepBackward()
 
                 UnsavedChanges dialog =
                         new UnsavedChanges(this,
-                                           "Save modifications?",
+                                           bundle2.getString("UnsavedChanges.text4"),
                                            options);
 
                 dialog.setVisible(true);

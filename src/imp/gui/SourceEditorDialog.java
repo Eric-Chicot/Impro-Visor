@@ -24,6 +24,7 @@ import imp.com.*;
 import imp.data.Score;
 import imp.roadmap.RoadMapFrame;
 import imp.util.BasicEditor;
+import java.util.ResourceBundle;
 
 /**
  *
@@ -39,16 +40,21 @@ public class SourceEditorDialog extends javax.swing.JDialog implements BasicEdit
     java.awt.Frame frameParent;
     CommandManager cm;
     int type;
-    
-    public static final String titlePrefix = "Editor For: ";
+    private ResourceBundle bundle2 = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
+    public final String titlePrefix = bundle2.getString("SourceEditorDialog.titlePrefix");
     
     public static final int LEADSHEET = 0;
     public static final int GRAMMAR = 1;
     public static final int STYLE = 2;
     public static final int DICTIONARY = 3;
-    public static final String[] typeStr = {"Leadsheet", "Grammar", "Style", "Dictionary"};
+    public final String[] typeStr = {
+        bundle2.getString("SourceEditorDialog.titleStr.text1"),
+        bundle2.getString("SourceEditorDialog.titleStr.text2"),
+        bundle2.getString("SourceEditorDialog.titleStr.text3"),
+        bundle2.getString("SourceEditorDialog.titleStr.text4")
+    };
 
-    public static String editorTitlePrefix = "Editor for: ";
+    public String editorTitlePrefix = bundle2.getString("SourceEditorDialog.titlePrefix");
     
     private boolean firstTime = true;
    
@@ -63,8 +69,8 @@ public class SourceEditorDialog extends javax.swing.JDialog implements BasicEdit
         initComponents();
         setSize(200,200);
         setTitle("");
-        editorToSourceButton.setText("Editor to " + typeStr[type]);
-        sourceToEditorButton.setText(typeStr[type] + " to Editor");
+        editorToSourceButton.setText(bundle2.getString("SourceEditorDialog.editorSource.text1") + typeStr[type]);
+        sourceToEditorButton.setText(typeStr[type] + bundle2.getString("SourceEditorDialog.editorSource.text2"));
         
         sourceEditor.setFont(new java.awt.Font("Lucida Console", java.awt.Font.PLAIN, 13));
     }
@@ -109,7 +115,8 @@ public class SourceEditorDialog extends javax.swing.JDialog implements BasicEdit
         editorToSourceButton = new javax.swing.JButton();
         sourceToEditorButton = new javax.swing.JButton();
 
-        setTitle("Editor");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
+        setTitle(bundle.getString("SourceEditorDialog.title")); // NOI18N
         setAlwaysOnTop(true);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -131,7 +138,7 @@ public class SourceEditorDialog extends javax.swing.JDialog implements BasicEdit
 
         getContentPane().add(sourceEditorScrollPane, java.awt.BorderLayout.CENTER);
 
-        editorToSourceButton.setToolTipText("Load the current leadsheet to the textual editor.\n");
+        editorToSourceButton.setToolTipText(bundle.getString("SourceEditorDialog.editorToSourceButton.toolTipText")); // NOI18N
         editorToSourceButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         editorToSourceButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
