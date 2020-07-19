@@ -45,7 +45,7 @@ public class HelpDialog extends javax.swing.JDialog {
 
         helpTabbedPane = new javax.swing.JTabbedPane();
         helpByTopic = new javax.swing.JScrollPane();
-        helpByTopicList = new javax.swing.JTextArea();
+        helpByTopicList = new javax.swing.JTextPane();
         alphaCommandPane = new javax.swing.JScrollPane();
         alphaCommandList = new javax.swing.JTextArea();
         melodyNotation = new javax.swing.JScrollPane();
@@ -93,13 +93,9 @@ public class HelpDialog extends javax.swing.JDialog {
         helpByTopic.setMinimumSize(new java.awt.Dimension(500, 800));
         helpByTopic.setPreferredSize(new java.awt.Dimension(600, 900));
 
-        helpByTopicList.setEditable(false);
-        helpByTopicList.setColumns(20);
-        helpByTopicList.setFont(new java.awt.Font("Lucida Console", 0, 13)); // NOI18N
-        helpByTopicList.setRows(5);
+        helpByTopicList.setContentType(bundle.getString("CommonDialog.contentType")); // NOI18N
         helpByTopicList.setText(bundle.getString("HelpDialog.helpByTopicList.text")); // NOI18N
         helpByTopic.setViewportView(helpByTopicList);
-        helpByTopicList.setEditable(false);
 
         helpTabbedPane.addTab(bundle.getString("HelpDialog.helpByTopic.TabConstraints.tabTitle"), helpByTopic); // NOI18N
 
@@ -350,7 +346,7 @@ public class HelpDialog extends javax.swing.JDialog {
     private javax.swing.JScrollPane guideToneHelpPane;
     private javax.swing.JTextArea guideToneHelpTextArea;
     private javax.swing.JScrollPane helpByTopic;
-    private javax.swing.JTextArea helpByTopicList;
+    private javax.swing.JTextPane helpByTopicList;
     private javax.swing.JTabbedPane helpTabbedPane;
     private javax.swing.JTextArea lickGenSettings;
     private javax.swing.JScrollPane lickGenSettingsPane;
