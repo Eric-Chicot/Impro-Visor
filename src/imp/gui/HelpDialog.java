@@ -47,9 +47,9 @@ public class HelpDialog extends javax.swing.JDialog {
         helpByTopic = new javax.swing.JScrollPane();
         helpByTopicList = new javax.swing.JTextPane();
         alphaCommandPane = new javax.swing.JScrollPane();
-        alphaCommandList = new javax.swing.JTextArea();
+        alphaCommandList = new javax.swing.JTextPane();
         melodyNotation = new javax.swing.JScrollPane();
-        melodyNotationHelp = new javax.swing.JTextArea();
+        melodyNotationHelp = new javax.swing.JTextPane();
         chordListingPane = new javax.swing.JScrollPane();
         chordList = new javax.swing.JTextArea();
         SoloGenerator = new javax.swing.JScrollPane();
@@ -102,13 +102,9 @@ public class HelpDialog extends javax.swing.JDialog {
         alphaCommandPane.setMinimumSize(new java.awt.Dimension(500, 800));
         alphaCommandPane.setPreferredSize(new java.awt.Dimension(600, 900));
 
-        alphaCommandList.setEditable(false);
-        alphaCommandList.setColumns(20);
-        alphaCommandList.setFont(new java.awt.Font("Lucida Console", 0, 13)); // NOI18N
-        alphaCommandList.setRows(5);
+        alphaCommandList.setContentType(bundle.getString("CommonDialog.contentType")); // NOI18N
         alphaCommandList.setText(bundle.getString("HelpDialog.alphaCommandList.text")); // NOI18N
         alphaCommandPane.setViewportView(alphaCommandList);
-        alphaCommandList.setEditable(false);
 
         helpTabbedPane.addTab(bundle.getString("HelpDialog.alphaCommandPane.TabConstraints.tabTitle"), alphaCommandPane); // NOI18N
 
@@ -116,13 +112,9 @@ public class HelpDialog extends javax.swing.JDialog {
         melodyNotation.setMinimumSize(new java.awt.Dimension(500, 800));
         melodyNotation.setPreferredSize(new java.awt.Dimension(600, 900));
 
-        melodyNotationHelp.setEditable(false);
-        melodyNotationHelp.setColumns(20);
-        melodyNotationHelp.setFont(new java.awt.Font("Lucida Console", 0, 13)); // NOI18N
-        melodyNotationHelp.setRows(5);
+        melodyNotationHelp.setContentType(bundle.getString("CommonDialog.contentType")); // NOI18N
         melodyNotationHelp.setText(bundle.getString("HelpDialog.melodyNotationHelp.text")); // NOI18N
         melodyNotation.setViewportView(melodyNotationHelp);
-        melodyNotationHelp.setEditable(false);
 
         helpTabbedPane.addTab(bundle.getString("HelpDialog.melodyNotation.TabConstraints.tabTitle"), melodyNotation); // NOI18N
 
@@ -327,7 +319,7 @@ public class HelpDialog extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane CriticHelpPane;
     private javax.swing.JScrollPane SoloGenerator;
-    private javax.swing.JTextArea alphaCommandList;
+    private javax.swing.JTextPane alphaCommandList;
     private javax.swing.JScrollPane alphaCommandPane;
     private javax.swing.JScrollPane audioInputPane;
     private javax.swing.JTextArea audioInputPaneText;
@@ -351,7 +343,7 @@ public class HelpDialog extends javax.swing.JDialog {
     private javax.swing.JTextArea lickGenSettings;
     private javax.swing.JScrollPane lickGenSettingsPane;
     private javax.swing.JScrollPane melodyNotation;
-    private javax.swing.JTextArea melodyNotationHelp;
+    private javax.swing.JTextPane melodyNotationHelp;
     private javax.swing.JScrollPane rhythmHelperHelpPane;
     private javax.swing.JTextArea rhythmHelperHelpTextPane;
     private javax.swing.JTextArea roadmapHelp;
