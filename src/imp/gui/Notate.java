@@ -4475,7 +4475,7 @@ public Critic getCritic()
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("Notate.jPanel4.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION)); // NOI18N
         jPanel4.setLayout(new java.awt.GridBagLayout());
 
-        replaceWithDeltaCheckBox.setText("Use \u0394 for M7");
+        replaceWithDeltaCheckBox.setText(bundle.getString("Notate.replaceWithDelta.text")); // NOI18N
         replaceWithDeltaCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 replaceWithDeltaCheckBoxActionPerformed(evt);
@@ -4487,7 +4487,7 @@ public Critic getCritic()
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
         jPanel4.add(replaceWithDeltaCheckBox, gridBagConstraints);
 
-        replaceWithPhiCheckBox.setText("Use \u03D5 for m7b5");
+        replaceWithPhiCheckBox.setText(bundle.getString("Notate.replaceWithPhi.text")); // NOI18N
         replaceWithPhiCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 replaceWithPhiCheckBoxActionPerformed(evt);
