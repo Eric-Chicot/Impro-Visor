@@ -358,7 +358,8 @@ public void toFront() {
         cascadeMI = new javax.swing.JMenuItem();
         windowMenuSeparator = new javax.swing.JSeparator();
 
-        visichordDialog.setTitle("Visichord Display");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
+        visichordDialog.setTitle(bundle.getString("VoicingKeyboard.visichordDialog.title")); // NOI18N
         visichordDialog.setBackground(new java.awt.Color(255, 255, 255));
         visichordDialog.setBounds(new java.awt.Rectangle(0, 23, 100, 450));
         visichordDialog.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -367,7 +368,6 @@ public void toFront() {
         visichordDialog.getContentPane().setLayout(new java.awt.GridBagLayout());
 
         voicingStaffPanel.setBackground(new java.awt.Color(255, 255, 255));
-        voicingStaffPanel.setBounds(new java.awt.Rectangle(0, 0, 1100, 420));
         voicingStaffPanel.setMaximumSize(new java.awt.Dimension(1100, 420));
         voicingStaffPanel.setMinimumSize(new java.awt.Dimension(1100, 420));
         voicingStaffPanel.setName(""); // NOI18N
@@ -387,7 +387,7 @@ public void toFront() {
         gridBagConstraints.weighty = 1.0;
         visichordDialog.getContentPane().add(voicingStaffPanel, gridBagConstraints);
 
-        setTitle("Keyboard");
+        setTitle(bundle.getString("VoicingKeyboard.title")); // NOI18N
         setAlwaysOnTop(true);
         setBackground(new java.awt.Color(255, 51, 51));
         setMinimumSize(new java.awt.Dimension(1100, 370));
@@ -819,9 +819,9 @@ public void toFront() {
         gridBagConstraints.gridy = 2;
         getContentPane().add(jPanel1, gridBagConstraints);
 
-        chordRootNoteLabel.setText("Bass note indicated in blue.");
-        chordRootNoteLabel.setMaximumSize(new java.awt.Dimension(400, 14));
-        chordRootNoteLabel.setMinimumSize(new java.awt.Dimension(400, 14));
+        chordRootNoteLabel.setText(bundle.getString("VoicingKeyboard.chordRootNoteLabel.text")); // NOI18N
+        chordRootNoteLabel.setMaximumSize(new java.awt.Dimension(500, 14));
+        chordRootNoteLabel.setMinimumSize(new java.awt.Dimension(500, 16));
         chordRootNoteLabel.setPreferredSize(new java.awt.Dimension(400, 14));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -829,9 +829,9 @@ public void toFront() {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         getContentPane().add(chordRootNoteLabel, gridBagConstraints);
 
-        ctrlClicktoChangeRootLabel.setText("Ctrl-click to change bass note, Shift-click to change bass range.");
-        ctrlClicktoChangeRootLabel.setMaximumSize(new java.awt.Dimension(450, 14));
-        ctrlClicktoChangeRootLabel.setMinimumSize(new java.awt.Dimension(450, 14));
+        ctrlClicktoChangeRootLabel.setText(bundle.getString("VoicingKeyboard.ctrlClicktoChangeRootLabel.text")); // NOI18N
+        ctrlClicktoChangeRootLabel.setMaximumSize(new java.awt.Dimension(600, 16));
+        ctrlClicktoChangeRootLabel.setMinimumSize(new java.awt.Dimension(600, 16));
         ctrlClicktoChangeRootLabel.setPreferredSize(new java.awt.Dimension(450, 14));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -839,9 +839,9 @@ public void toFront() {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         getContentPane().add(ctrlClicktoChangeRootLabel, gridBagConstraints);
 
-        ctrlShiftClickExtLabel.setText("Ctrl-shift-click to add an extension.");
-        ctrlShiftClickExtLabel.setMaximumSize(new java.awt.Dimension(400, 14));
-        ctrlShiftClickExtLabel.setMinimumSize(new java.awt.Dimension(400, 14));
+        ctrlShiftClickExtLabel.setText(bundle.getString("VoicingKeyboard.ctrlShiftClickExtLabel.text")); // NOI18N
+        ctrlShiftClickExtLabel.setMaximumSize(new java.awt.Dimension(500, 14));
+        ctrlShiftClickExtLabel.setMinimumSize(new java.awt.Dimension(500, 16));
         ctrlShiftClickExtLabel.setPreferredSize(new java.awt.Dimension(400, 14));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -849,7 +849,7 @@ public void toFront() {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         getContentPane().add(ctrlShiftClickExtLabel, gridBagConstraints);
 
-        playChordButton.setText("Play Chord");
+        playChordButton.setText(bundle.getString("VoicingKeyboard.playChordButton.text")); // NOI18N
         playChordButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 playChordButtonActionPerformed(evt);
@@ -871,7 +871,7 @@ public void toFront() {
         jToolBar1.setFloatable(false);
 
         chordStepBackButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imp/gui/graphics/icons/playReversedGreen.gif"))); // NOI18N
-        chordStepBackButton.setToolTipText("Move back to the previous chord (without playing).\n");
+        chordStepBackButton.setToolTipText(bundle.getString("VoicingKeyboard.chordStepBackButton.toolTipText")); // NOI18N
         chordStepBackButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         chordStepBackButton.setFocusable(false);
         chordStepBackButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -887,7 +887,7 @@ public void toFront() {
         jToolBar1.add(chordStepBackButton);
 
         chordReplayButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imp/gui/graphics/icons/replayGreen.gif"))); // NOI18N
-        chordReplayButton.setToolTipText("Replays chord.");
+        chordReplayButton.setToolTipText(bundle.getString("VoicingKeyboard.chordReplayButton.toolTipText")); // NOI18N
         chordReplayButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         chordReplayButton.setFocusable(false);
         chordReplayButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -902,7 +902,7 @@ public void toFront() {
         jToolBar1.add(chordReplayButton);
 
         chordStepForwardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imp/gui/graphics/icons/playGreen.gif"))); // NOI18N
-        chordStepForwardButton.setToolTipText("Move to, and play, the next chord.");
+        chordStepForwardButton.setToolTipText(bundle.getString("VoicingKeyboard.chordStepForwardButton.toolTipText")); // NOI18N
         chordStepForwardButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         chordStepForwardButton.setFocusable(false);
         chordStepForwardButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -919,7 +919,7 @@ public void toFront() {
 
         playStopButtonGroup.add(pauseBtn);
         pauseBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imp/gui/graphics/toolbar/pause.gif"))); // NOI18N
-        pauseBtn.setToolTipText("Pause or resume playback.");
+        pauseBtn.setToolTipText(bundle.getString("VoicingKeyboard.pauseBtn.toolTipText")); // NOI18N
         pauseBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         pauseBtn.setFocusable(false);
         pauseBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -935,7 +935,7 @@ public void toFront() {
         jToolBar1.add(pauseBtn);
 
         playBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imp/gui/graphics/toolbar/play.gif"))); // NOI18N
-        playBtn.setToolTipText("Play the entire leadsheet, starting with the first chorus.\nTo play just the current chorus, select the first beat of that chorus and press Shift-Enter.");
+        playBtn.setToolTipText(bundle.getString("VoicingKeyboard.playBtn.toolTipText")); // NOI18N
         playBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         playStopButtonGroup.add(playBtn);
         playBtn.setFocusable(false);
@@ -953,7 +953,7 @@ public void toFront() {
         jToolBar1.add(playBtn);
 
         stopBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imp/gui/graphics/toolbar/stop.gif"))); // NOI18N
-        stopBtn.setToolTipText("Stop playback.");
+        stopBtn.setToolTipText(bundle.getString("VoicingKeyboard.stopBtn.toolTipText")); // NOI18N
         stopBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         playStopButtonGroup.add(stopBtn);
         stopBtn.setFocusable(false);
@@ -974,7 +974,7 @@ public void toFront() {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         getContentPane().add(jToolBar1, gridBagConstraints);
 
-        saveVoicingBtn.setText("Save Voicing");
+        saveVoicingBtn.setText(bundle.getString("VoicingKeyboard.saveVoicingBtn.text")); // NOI18N
         saveVoicingBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveVoicingBtnActionPerformed(evt);
@@ -983,8 +983,10 @@ public void toFront() {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 200);
         getContentPane().add(saveVoicingBtn, gridBagConstraints);
-        saveVoicingBtn.getAccessibleContext().setAccessibleName("VoicingChord");
+        saveVoicingBtn.getAccessibleContext().setAccessibleName(bundle.getString("VoicingKeyboard.saveVoicingBtn.AccessibleContext.accessibleName")); // NOI18N
 
         keyNamesPanel.setAlignmentX(0.0F);
         keyNamesPanel.setAlignmentY(0.0F);
@@ -998,7 +1000,7 @@ public void toFront() {
         whiteKeyLabels.setLayout(new java.awt.GridBagLayout());
 
         A0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        A0.setText("A");
+        A0.setText(bundle.getString("VoicingKeyboard.A0.text")); // NOI18N
         A0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         A0.setMaximumSize(new java.awt.Dimension(20, 14));
         A0.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1011,7 +1013,7 @@ public void toFront() {
         whiteKeyLabels.add(A0, gridBagConstraints);
 
         B0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        B0.setText("B");
+        B0.setText(bundle.getString("VoicingKeyboard.B0.text")); // NOI18N
         B0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         B0.setMaximumSize(new java.awt.Dimension(20, 14));
         B0.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1023,7 +1025,7 @@ public void toFront() {
         whiteKeyLabels.add(B0, gridBagConstraints);
 
         C1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        C1.setText("C");
+        C1.setText(bundle.getString("VoicingKeyboard.C1.text")); // NOI18N
         C1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         C1.setMaximumSize(new java.awt.Dimension(20, 14));
         C1.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1036,7 +1038,7 @@ public void toFront() {
         whiteKeyLabels.add(C1, gridBagConstraints);
 
         D1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        D1.setText("D");
+        D1.setText(bundle.getString("VoicingKeyboard.D1.text")); // NOI18N
         D1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         D1.setMaximumSize(new java.awt.Dimension(20, 14));
         D1.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1048,7 +1050,7 @@ public void toFront() {
         whiteKeyLabels.add(D1, gridBagConstraints);
 
         E1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        E1.setText("E");
+        E1.setText(bundle.getString("VoicingKeyboard.E1.text")); // NOI18N
         E1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         E1.setMaximumSize(new java.awt.Dimension(20, 14));
         E1.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1060,7 +1062,7 @@ public void toFront() {
         whiteKeyLabels.add(E1, gridBagConstraints);
 
         F1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        F1.setText("F");
+        F1.setText(bundle.getString("VoicingKeyboard.F1.text")); // NOI18N
         F1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         F1.setMaximumSize(new java.awt.Dimension(20, 14));
         F1.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1072,7 +1074,7 @@ public void toFront() {
         whiteKeyLabels.add(F1, gridBagConstraints);
 
         G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        G1.setText("G");
+        G1.setText(bundle.getString("VoicingKeyboard.G1.text")); // NOI18N
         G1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         G1.setMaximumSize(new java.awt.Dimension(20, 14));
         G1.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1084,7 +1086,7 @@ public void toFront() {
         whiteKeyLabels.add(G1, gridBagConstraints);
 
         A1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        A1.setText("A");
+        A1.setText(bundle.getString("VoicingKeyboard.A1.text")); // NOI18N
         A1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         A1.setMaximumSize(new java.awt.Dimension(20, 14));
         A1.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1097,7 +1099,7 @@ public void toFront() {
         whiteKeyLabels.add(A1, gridBagConstraints);
 
         B1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        B1.setText("B");
+        B1.setText(bundle.getString("VoicingKeyboard.B1.text")); // NOI18N
         B1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         B1.setMaximumSize(new java.awt.Dimension(20, 14));
         B1.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1109,7 +1111,7 @@ public void toFront() {
         whiteKeyLabels.add(B1, gridBagConstraints);
 
         C2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        C2.setText("C");
+        C2.setText(bundle.getString("VoicingKeyboard.C2.text")); // NOI18N
         C2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         C2.setMaximumSize(new java.awt.Dimension(20, 14));
         C2.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1123,7 +1125,7 @@ public void toFront() {
 
         D2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         D2.setLabelFor(keyD4);
-        D2.setText("D");
+        D2.setText(bundle.getString("VoicingKeyboard.D2.text")); // NOI18N
         D2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         D2.setMaximumSize(new java.awt.Dimension(20, 14));
         D2.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1135,7 +1137,7 @@ public void toFront() {
         whiteKeyLabels.add(D2, gridBagConstraints);
 
         E2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        E2.setText("E");
+        E2.setText(bundle.getString("VoicingKeyboard.E2.text")); // NOI18N
         E2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         E2.setMaximumSize(new java.awt.Dimension(20, 14));
         E2.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1147,7 +1149,7 @@ public void toFront() {
         whiteKeyLabels.add(E2, gridBagConstraints);
 
         F2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        F2.setText("F");
+        F2.setText(bundle.getString("VoicingKeyboard.F2.text")); // NOI18N
         F2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         F2.setMaximumSize(new java.awt.Dimension(20, 14));
         F2.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1159,7 +1161,7 @@ public void toFront() {
         whiteKeyLabels.add(F2, gridBagConstraints);
 
         G2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        G2.setText("G");
+        G2.setText(bundle.getString("VoicingKeyboard.G2.text")); // NOI18N
         G2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         G2.setMaximumSize(new java.awt.Dimension(20, 14));
         G2.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1171,7 +1173,7 @@ public void toFront() {
         whiteKeyLabels.add(G2, gridBagConstraints);
 
         A2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        A2.setText("A");
+        A2.setText(bundle.getString("VoicingKeyboard.A2.text")); // NOI18N
         A2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         A2.setMaximumSize(new java.awt.Dimension(20, 14));
         A2.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1184,7 +1186,7 @@ public void toFront() {
         whiteKeyLabels.add(A2, gridBagConstraints);
 
         B2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        B2.setText("B");
+        B2.setText(bundle.getString("VoicingKeyboard.B2.text")); // NOI18N
         B2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         B2.setMaximumSize(new java.awt.Dimension(20, 14));
         B2.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1196,7 +1198,7 @@ public void toFront() {
         whiteKeyLabels.add(B2, gridBagConstraints);
 
         C3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        C3.setText("C");
+        C3.setText(bundle.getString("VoicingKeyboard.C3.text")); // NOI18N
         C3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         C3.setMaximumSize(new java.awt.Dimension(20, 14));
         C3.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1210,7 +1212,7 @@ public void toFront() {
 
         D3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         D3.setLabelFor(keyD4);
-        D3.setText("D");
+        D3.setText(bundle.getString("VoicingKeyboard.D3.text")); // NOI18N
         D3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         D3.setMaximumSize(new java.awt.Dimension(20, 14));
         D3.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1222,7 +1224,7 @@ public void toFront() {
         whiteKeyLabels.add(D3, gridBagConstraints);
 
         E3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        E3.setText("E");
+        E3.setText(bundle.getString("VoicingKeyboard.E3.text")); // NOI18N
         E3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         E3.setMaximumSize(new java.awt.Dimension(20, 14));
         E3.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1234,7 +1236,7 @@ public void toFront() {
         whiteKeyLabels.add(E3, gridBagConstraints);
 
         F3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        F3.setText("F");
+        F3.setText(bundle.getString("VoicingKeyboard.F3.text")); // NOI18N
         F3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         F3.setMaximumSize(new java.awt.Dimension(20, 14));
         F3.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1246,7 +1248,7 @@ public void toFront() {
         whiteKeyLabels.add(F3, gridBagConstraints);
 
         G3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        G3.setText("G");
+        G3.setText(bundle.getString("VoicingKeyboard.G3.text")); // NOI18N
         G3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         G3.setMaximumSize(new java.awt.Dimension(20, 14));
         G3.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1258,7 +1260,7 @@ public void toFront() {
         whiteKeyLabels.add(G3, gridBagConstraints);
 
         A3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        A3.setText("A");
+        A3.setText(bundle.getString("VoicingKeyboard.A3.text")); // NOI18N
         A3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         A3.setMaximumSize(new java.awt.Dimension(20, 14));
         A3.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1271,7 +1273,7 @@ public void toFront() {
         whiteKeyLabels.add(A3, gridBagConstraints);
 
         B3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        B3.setText("B");
+        B3.setText(bundle.getString("VoicingKeyboard.B3.text")); // NOI18N
         B3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         B3.setMaximumSize(new java.awt.Dimension(20, 14));
         B3.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1283,7 +1285,7 @@ public void toFront() {
         whiteKeyLabels.add(B3, gridBagConstraints);
 
         C4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        C4.setText("C");
+        C4.setText(bundle.getString("VoicingKeyboard.C4.text")); // NOI18N
         C4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         C4.setMaximumSize(new java.awt.Dimension(20, 14));
         C4.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1297,7 +1299,7 @@ public void toFront() {
 
         D4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         D4.setLabelFor(keyD4);
-        D4.setText("D");
+        D4.setText(bundle.getString("VoicingKeyboard.D4.text")); // NOI18N
         D4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         D4.setMaximumSize(new java.awt.Dimension(20, 14));
         D4.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1309,7 +1311,7 @@ public void toFront() {
         whiteKeyLabels.add(D4, gridBagConstraints);
 
         E4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        E4.setText("E");
+        E4.setText(bundle.getString("VoicingKeyboard.E4.text")); // NOI18N
         E4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         E4.setMaximumSize(new java.awt.Dimension(20, 14));
         E4.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1321,7 +1323,7 @@ public void toFront() {
         whiteKeyLabels.add(E4, gridBagConstraints);
 
         F4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        F4.setText("F");
+        F4.setText(bundle.getString("VoicingKeyboard.F4.text")); // NOI18N
         F4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         F4.setMaximumSize(new java.awt.Dimension(20, 14));
         F4.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1333,7 +1335,7 @@ public void toFront() {
         whiteKeyLabels.add(F4, gridBagConstraints);
 
         G4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        G4.setText("G");
+        G4.setText(bundle.getString("VoicingKeyboard.G4.text")); // NOI18N
         G4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         G4.setMaximumSize(new java.awt.Dimension(20, 14));
         G4.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1345,7 +1347,7 @@ public void toFront() {
         whiteKeyLabels.add(G4, gridBagConstraints);
 
         A4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        A4.setText("A");
+        A4.setText(bundle.getString("VoicingKeyboard.A4.text")); // NOI18N
         A4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         A4.setMaximumSize(new java.awt.Dimension(20, 14));
         A4.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1358,7 +1360,7 @@ public void toFront() {
         whiteKeyLabels.add(A4, gridBagConstraints);
 
         B4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        B4.setText("B");
+        B4.setText(bundle.getString("VoicingKeyboard.B4.text")); // NOI18N
         B4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         B4.setMaximumSize(new java.awt.Dimension(20, 14));
         B4.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1370,7 +1372,7 @@ public void toFront() {
         whiteKeyLabels.add(B4, gridBagConstraints);
 
         C5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        C5.setText("C");
+        C5.setText(bundle.getString("VoicingKeyboard.C5.text")); // NOI18N
         C5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         C5.setMaximumSize(new java.awt.Dimension(20, 14));
         C5.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1384,7 +1386,7 @@ public void toFront() {
 
         D5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         D5.setLabelFor(keyD4);
-        D5.setText("D");
+        D5.setText(bundle.getString("VoicingKeyboard.D5.text")); // NOI18N
         D5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         D5.setMaximumSize(new java.awt.Dimension(20, 14));
         D5.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1396,7 +1398,7 @@ public void toFront() {
         whiteKeyLabels.add(D5, gridBagConstraints);
 
         E5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        E5.setText("E");
+        E5.setText(bundle.getString("VoicingKeyboard.E5.text")); // NOI18N
         E5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         E5.setMaximumSize(new java.awt.Dimension(20, 14));
         E5.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1408,7 +1410,7 @@ public void toFront() {
         whiteKeyLabels.add(E5, gridBagConstraints);
 
         F5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        F5.setText("F");
+        F5.setText(bundle.getString("VoicingKeyboard.F5.text")); // NOI18N
         F5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         F5.setMaximumSize(new java.awt.Dimension(20, 14));
         F5.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1420,7 +1422,7 @@ public void toFront() {
         whiteKeyLabels.add(F5, gridBagConstraints);
 
         G5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        G5.setText("G");
+        G5.setText(bundle.getString("VoicingKeyboard.G5.text")); // NOI18N
         G5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         G5.setMaximumSize(new java.awt.Dimension(20, 14));
         G5.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1432,7 +1434,7 @@ public void toFront() {
         whiteKeyLabels.add(G5, gridBagConstraints);
 
         A5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        A5.setText("A");
+        A5.setText(bundle.getString("VoicingKeyboard.A5.text")); // NOI18N
         A5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         A5.setMaximumSize(new java.awt.Dimension(20, 14));
         A5.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1445,7 +1447,7 @@ public void toFront() {
         whiteKeyLabels.add(A5, gridBagConstraints);
 
         B5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        B5.setText("B");
+        B5.setText(bundle.getString("VoicingKeyboard.B5.text")); // NOI18N
         B5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         B5.setMaximumSize(new java.awt.Dimension(20, 14));
         B5.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1457,7 +1459,7 @@ public void toFront() {
         whiteKeyLabels.add(B5, gridBagConstraints);
 
         C6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        C6.setText("C");
+        C6.setText(bundle.getString("VoicingKeyboard.C6.text")); // NOI18N
         C6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         C6.setMaximumSize(new java.awt.Dimension(20, 14));
         C6.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1471,7 +1473,7 @@ public void toFront() {
 
         D6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         D6.setLabelFor(keyD4);
-        D6.setText("D");
+        D6.setText(bundle.getString("VoicingKeyboard.D6.text")); // NOI18N
         D6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         D6.setMaximumSize(new java.awt.Dimension(20, 14));
         D6.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1483,7 +1485,7 @@ public void toFront() {
         whiteKeyLabels.add(D6, gridBagConstraints);
 
         E6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        E6.setText("E");
+        E6.setText(bundle.getString("VoicingKeyboard.E6.text")); // NOI18N
         E6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         E6.setMaximumSize(new java.awt.Dimension(20, 14));
         E6.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1495,7 +1497,7 @@ public void toFront() {
         whiteKeyLabels.add(E6, gridBagConstraints);
 
         F6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        F6.setText("F");
+        F6.setText(bundle.getString("VoicingKeyboard.F6.text")); // NOI18N
         F6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         F6.setMaximumSize(new java.awt.Dimension(20, 14));
         F6.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1507,7 +1509,7 @@ public void toFront() {
         whiteKeyLabels.add(F6, gridBagConstraints);
 
         G6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        G6.setText("G");
+        G6.setText(bundle.getString("VoicingKeyboard.G6.text")); // NOI18N
         G6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         G6.setMaximumSize(new java.awt.Dimension(20, 14));
         G6.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1519,7 +1521,7 @@ public void toFront() {
         whiteKeyLabels.add(G6, gridBagConstraints);
 
         A6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        A6.setText("A");
+        A6.setText(bundle.getString("VoicingKeyboard.A6.text")); // NOI18N
         A6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         A6.setMaximumSize(new java.awt.Dimension(20, 14));
         A6.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1532,7 +1534,7 @@ public void toFront() {
         whiteKeyLabels.add(A6, gridBagConstraints);
 
         B6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        B6.setText("B");
+        B6.setText(bundle.getString("VoicingKeyboard.B6.text")); // NOI18N
         B6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         B6.setMaximumSize(new java.awt.Dimension(20, 14));
         B6.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1544,7 +1546,7 @@ public void toFront() {
         whiteKeyLabels.add(B6, gridBagConstraints);
 
         C7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        C7.setText("C");
+        C7.setText(bundle.getString("VoicingKeyboard.C7.text")); // NOI18N
         C7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         C7.setMaximumSize(new java.awt.Dimension(20, 14));
         C7.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1558,7 +1560,7 @@ public void toFront() {
 
         D7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         D7.setLabelFor(keyD4);
-        D7.setText("D");
+        D7.setText(bundle.getString("VoicingKeyboard.D7.text")); // NOI18N
         D7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         D7.setMaximumSize(new java.awt.Dimension(20, 14));
         D7.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1570,7 +1572,7 @@ public void toFront() {
         whiteKeyLabels.add(D7, gridBagConstraints);
 
         E7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        E7.setText("E");
+        E7.setText(bundle.getString("VoicingKeyboard.E7.text")); // NOI18N
         E7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         E7.setMaximumSize(new java.awt.Dimension(20, 14));
         E7.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1582,7 +1584,7 @@ public void toFront() {
         whiteKeyLabels.add(E7, gridBagConstraints);
 
         F7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        F7.setText("F");
+        F7.setText(bundle.getString("VoicingKeyboard.F7.text")); // NOI18N
         F7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         F7.setMaximumSize(new java.awt.Dimension(20, 14));
         F7.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1594,7 +1596,7 @@ public void toFront() {
         whiteKeyLabels.add(F7, gridBagConstraints);
 
         G7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        G7.setText("G");
+        G7.setText(bundle.getString("VoicingKeyboard.G7.text")); // NOI18N
         G7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         G7.setMaximumSize(new java.awt.Dimension(20, 14));
         G7.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1606,7 +1608,7 @@ public void toFront() {
         whiteKeyLabels.add(G7, gridBagConstraints);
 
         A7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        A7.setText("A");
+        A7.setText(bundle.getString("VoicingKeyboard.A7.text")); // NOI18N
         A7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         A7.setMaximumSize(new java.awt.Dimension(20, 14));
         A7.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1619,7 +1621,7 @@ public void toFront() {
         whiteKeyLabels.add(A7, gridBagConstraints);
 
         B7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        B7.setText("B");
+        B7.setText(bundle.getString("VoicingKeyboard.B7.text")); // NOI18N
         B7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         B7.setMaximumSize(new java.awt.Dimension(20, 14));
         B7.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1631,7 +1633,7 @@ public void toFront() {
         whiteKeyLabels.add(B7, gridBagConstraints);
 
         C8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        C8.setText("C");
+        C8.setText(bundle.getString("VoicingKeyboard.C8.text")); // NOI18N
         C8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         C8.setMaximumSize(new java.awt.Dimension(20, 14));
         C8.setMinimumSize(new java.awt.Dimension(20, 14));
@@ -1658,7 +1660,7 @@ public void toFront() {
         blackKeyLabels.setLayout(new java.awt.GridBagLayout());
 
         Bb0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Bb0.setText("Bb");
+        Bb0.setText(bundle.getString("VoicingKeyboard.Bb0.text")); // NOI18N
         Bb0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Bb0.setMaximumSize(new java.awt.Dimension(40, 14));
         Bb0.setMinimumSize(new java.awt.Dimension(40, 14));
@@ -1671,7 +1673,7 @@ public void toFront() {
         blackKeyLabels.add(Bb0, gridBagConstraints);
 
         Csharp1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        Csharp1.setText("C#");
+        Csharp1.setText(bundle.getString("VoicingKeyboard.Csharp1.text")); // NOI18N
         Csharp1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Csharp1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         Csharp1.setMaximumSize(new java.awt.Dimension(30, 14));
@@ -1683,7 +1685,7 @@ public void toFront() {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         blackKeyLabels.add(Csharp1, gridBagConstraints);
 
-        Eb1.setText(" Eb");
+        Eb1.setText(bundle.getString("VoicingKeyboard.Eb1.text")); // NOI18N
         Eb1.setMaximumSize(new java.awt.Dimension(30, 14));
         Eb1.setMinimumSize(new java.awt.Dimension(30, 14));
         Eb1.setPreferredSize(new java.awt.Dimension(30, 14));
@@ -1694,7 +1696,7 @@ public void toFront() {
         blackKeyLabels.add(Eb1, gridBagConstraints);
 
         Fsharp1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        Fsharp1.setText("F#");
+        Fsharp1.setText(bundle.getString("VoicingKeyboard.Fsharp1.text")); // NOI18N
         Fsharp1.setMaximumSize(new java.awt.Dimension(27, 14));
         Fsharp1.setMinimumSize(new java.awt.Dimension(27, 14));
         Fsharp1.setPreferredSize(new java.awt.Dimension(27, 14));
@@ -1705,7 +1707,7 @@ public void toFront() {
         blackKeyLabels.add(Fsharp1, gridBagConstraints);
 
         Gsharp1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Gsharp1.setText("G#");
+        Gsharp1.setText(bundle.getString("VoicingKeyboard.Gsharp1.text")); // NOI18N
         Gsharp1.setMaximumSize(new java.awt.Dimension(26, 14));
         Gsharp1.setMinimumSize(new java.awt.Dimension(26, 14));
         Gsharp1.setPreferredSize(new java.awt.Dimension(26, 14));
@@ -1715,7 +1717,7 @@ public void toFront() {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         blackKeyLabels.add(Gsharp1, gridBagConstraints);
 
-        Bb1.setText("Bb");
+        Bb1.setText(bundle.getString("VoicingKeyboard.Bb1.text")); // NOI18N
         Bb1.setMaximumSize(new java.awt.Dimension(27, 14));
         Bb1.setMinimumSize(new java.awt.Dimension(27, 14));
         Bb1.setPreferredSize(new java.awt.Dimension(27, 14));
@@ -1726,7 +1728,7 @@ public void toFront() {
         blackKeyLabels.add(Bb1, gridBagConstraints);
 
         Csharp2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        Csharp2.setText("C#");
+        Csharp2.setText(bundle.getString("VoicingKeyboard.Csharp2.text")); // NOI18N
         Csharp2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Csharp2.setMaximumSize(new java.awt.Dimension(30, 14));
         Csharp2.setMinimumSize(new java.awt.Dimension(30, 14));
@@ -1737,7 +1739,7 @@ public void toFront() {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         blackKeyLabels.add(Csharp2, gridBagConstraints);
 
-        Eb2.setText(" Eb");
+        Eb2.setText(bundle.getString("VoicingKeyboard.Eb2.text")); // NOI18N
         Eb2.setMaximumSize(new java.awt.Dimension(30, 14));
         Eb2.setMinimumSize(new java.awt.Dimension(30, 14));
         Eb2.setPreferredSize(new java.awt.Dimension(30, 14));
@@ -1748,7 +1750,7 @@ public void toFront() {
         blackKeyLabels.add(Eb2, gridBagConstraints);
 
         Fsharp2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        Fsharp2.setText("F#");
+        Fsharp2.setText(bundle.getString("VoicingKeyboard.Fsharp2.text")); // NOI18N
         Fsharp2.setMaximumSize(new java.awt.Dimension(27, 14));
         Fsharp2.setMinimumSize(new java.awt.Dimension(27, 14));
         Fsharp2.setPreferredSize(new java.awt.Dimension(27, 14));
@@ -1759,7 +1761,7 @@ public void toFront() {
         blackKeyLabels.add(Fsharp2, gridBagConstraints);
 
         Gsharp2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Gsharp2.setText("G#");
+        Gsharp2.setText(bundle.getString("VoicingKeyboard.Gsharp2.text")); // NOI18N
         Gsharp2.setMaximumSize(new java.awt.Dimension(26, 14));
         Gsharp2.setMinimumSize(new java.awt.Dimension(26, 14));
         Gsharp2.setPreferredSize(new java.awt.Dimension(26, 14));
@@ -1769,7 +1771,7 @@ public void toFront() {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         blackKeyLabels.add(Gsharp2, gridBagConstraints);
 
-        Bb2.setText("Bb");
+        Bb2.setText(bundle.getString("VoicingKeyboard.Bb2.text")); // NOI18N
         Bb2.setMaximumSize(new java.awt.Dimension(27, 14));
         Bb2.setMinimumSize(new java.awt.Dimension(27, 14));
         Bb2.setPreferredSize(new java.awt.Dimension(27, 14));
@@ -1780,7 +1782,7 @@ public void toFront() {
         blackKeyLabels.add(Bb2, gridBagConstraints);
 
         Csharp3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        Csharp3.setText("C#");
+        Csharp3.setText(bundle.getString("VoicingKeyboard.Csharp3.text")); // NOI18N
         Csharp3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Csharp3.setMaximumSize(new java.awt.Dimension(30, 14));
         Csharp3.setMinimumSize(new java.awt.Dimension(30, 14));
@@ -1791,7 +1793,7 @@ public void toFront() {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         blackKeyLabels.add(Csharp3, gridBagConstraints);
 
-        Eb3.setText(" Eb");
+        Eb3.setText(bundle.getString("VoicingKeyboard.Eb3.text")); // NOI18N
         Eb3.setMaximumSize(new java.awt.Dimension(30, 14));
         Eb3.setMinimumSize(new java.awt.Dimension(30, 14));
         Eb3.setPreferredSize(new java.awt.Dimension(30, 14));
@@ -1802,7 +1804,7 @@ public void toFront() {
         blackKeyLabels.add(Eb3, gridBagConstraints);
 
         Fsharp3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        Fsharp3.setText("F#");
+        Fsharp3.setText(bundle.getString("VoicingKeyboard.Fsharp3.text")); // NOI18N
         Fsharp3.setMaximumSize(new java.awt.Dimension(27, 14));
         Fsharp3.setMinimumSize(new java.awt.Dimension(27, 14));
         Fsharp3.setPreferredSize(new java.awt.Dimension(27, 14));
@@ -1813,7 +1815,7 @@ public void toFront() {
         blackKeyLabels.add(Fsharp3, gridBagConstraints);
 
         Gsharp3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Gsharp3.setText("G#");
+        Gsharp3.setText(bundle.getString("VoicingKeyboard.Gsharp3.text")); // NOI18N
         Gsharp3.setMaximumSize(new java.awt.Dimension(26, 14));
         Gsharp3.setMinimumSize(new java.awt.Dimension(26, 14));
         Gsharp3.setPreferredSize(new java.awt.Dimension(26, 14));
@@ -1823,7 +1825,7 @@ public void toFront() {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         blackKeyLabels.add(Gsharp3, gridBagConstraints);
 
-        Bb3.setText("Bb");
+        Bb3.setText(bundle.getString("VoicingKeyboard.Bb3.text")); // NOI18N
         Bb3.setMaximumSize(new java.awt.Dimension(27, 14));
         Bb3.setMinimumSize(new java.awt.Dimension(27, 14));
         Bb3.setPreferredSize(new java.awt.Dimension(27, 14));
@@ -1834,7 +1836,7 @@ public void toFront() {
         blackKeyLabels.add(Bb3, gridBagConstraints);
 
         Csharp4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        Csharp4.setText("C#");
+        Csharp4.setText(bundle.getString("VoicingKeyboard.Csharp4.text")); // NOI18N
         Csharp4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Csharp4.setMaximumSize(new java.awt.Dimension(30, 14));
         Csharp4.setMinimumSize(new java.awt.Dimension(30, 14));
@@ -1845,7 +1847,7 @@ public void toFront() {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         blackKeyLabels.add(Csharp4, gridBagConstraints);
 
-        Eb4.setText(" Eb");
+        Eb4.setText(bundle.getString("VoicingKeyboard.Eb4.text")); // NOI18N
         Eb4.setMaximumSize(new java.awt.Dimension(30, 14));
         Eb4.setMinimumSize(new java.awt.Dimension(30, 14));
         Eb4.setPreferredSize(new java.awt.Dimension(30, 14));
@@ -1856,7 +1858,7 @@ public void toFront() {
         blackKeyLabels.add(Eb4, gridBagConstraints);
 
         Fsharp4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        Fsharp4.setText("F#");
+        Fsharp4.setText(bundle.getString("VoicingKeyboard.Fsharp4.text")); // NOI18N
         Fsharp4.setMaximumSize(new java.awt.Dimension(27, 14));
         Fsharp4.setMinimumSize(new java.awt.Dimension(27, 14));
         Fsharp4.setPreferredSize(new java.awt.Dimension(27, 14));
@@ -1867,7 +1869,7 @@ public void toFront() {
         blackKeyLabels.add(Fsharp4, gridBagConstraints);
 
         Gsharp4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Gsharp4.setText("G#");
+        Gsharp4.setText(bundle.getString("VoicingKeyboard.Gsharp4.text")); // NOI18N
         Gsharp4.setMaximumSize(new java.awt.Dimension(26, 14));
         Gsharp4.setMinimumSize(new java.awt.Dimension(26, 14));
         Gsharp4.setPreferredSize(new java.awt.Dimension(26, 14));
@@ -1877,7 +1879,7 @@ public void toFront() {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         blackKeyLabels.add(Gsharp4, gridBagConstraints);
 
-        Bb4.setText("Bb");
+        Bb4.setText(bundle.getString("VoicingKeyboard.Bb4.text")); // NOI18N
         Bb4.setMaximumSize(new java.awt.Dimension(27, 14));
         Bb4.setMinimumSize(new java.awt.Dimension(27, 14));
         Bb4.setPreferredSize(new java.awt.Dimension(27, 14));
@@ -1888,7 +1890,7 @@ public void toFront() {
         blackKeyLabels.add(Bb4, gridBagConstraints);
 
         Csharp5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        Csharp5.setText("C#");
+        Csharp5.setText(bundle.getString("VoicingKeyboard.Csharp5.text")); // NOI18N
         Csharp5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Csharp5.setMaximumSize(new java.awt.Dimension(30, 14));
         Csharp5.setMinimumSize(new java.awt.Dimension(30, 14));
@@ -1899,7 +1901,7 @@ public void toFront() {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         blackKeyLabels.add(Csharp5, gridBagConstraints);
 
-        Eb5.setText(" Eb");
+        Eb5.setText(bundle.getString("VoicingKeyboard.Eb5.text")); // NOI18N
         Eb5.setMaximumSize(new java.awt.Dimension(30, 14));
         Eb5.setMinimumSize(new java.awt.Dimension(30, 14));
         Eb5.setPreferredSize(new java.awt.Dimension(30, 14));
@@ -1910,7 +1912,7 @@ public void toFront() {
         blackKeyLabels.add(Eb5, gridBagConstraints);
 
         Fsharp5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        Fsharp5.setText("F#");
+        Fsharp5.setText(bundle.getString("VoicingKeyboard.Fsharp5.text")); // NOI18N
         Fsharp5.setMaximumSize(new java.awt.Dimension(27, 14));
         Fsharp5.setMinimumSize(new java.awt.Dimension(27, 14));
         Fsharp5.setPreferredSize(new java.awt.Dimension(27, 14));
@@ -1921,7 +1923,7 @@ public void toFront() {
         blackKeyLabels.add(Fsharp5, gridBagConstraints);
 
         Gsharp5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Gsharp5.setText("G#");
+        Gsharp5.setText(bundle.getString("VoicingKeyboard.Gsharp5.text")); // NOI18N
         Gsharp5.setMaximumSize(new java.awt.Dimension(26, 14));
         Gsharp5.setMinimumSize(new java.awt.Dimension(26, 14));
         Gsharp5.setPreferredSize(new java.awt.Dimension(26, 14));
@@ -1931,7 +1933,7 @@ public void toFront() {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         blackKeyLabels.add(Gsharp5, gridBagConstraints);
 
-        Bb5.setText("Bb");
+        Bb5.setText(bundle.getString("VoicingKeyboard.Bb5.text")); // NOI18N
         Bb5.setMaximumSize(new java.awt.Dimension(27, 14));
         Bb5.setMinimumSize(new java.awt.Dimension(27, 14));
         Bb5.setPreferredSize(new java.awt.Dimension(27, 14));
@@ -1942,7 +1944,7 @@ public void toFront() {
         blackKeyLabels.add(Bb5, gridBagConstraints);
 
         Csharp6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        Csharp6.setText("C#");
+        Csharp6.setText(bundle.getString("VoicingKeyboard.Csharp6.text")); // NOI18N
         Csharp6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Csharp6.setMaximumSize(new java.awt.Dimension(30, 14));
         Csharp6.setMinimumSize(new java.awt.Dimension(30, 14));
@@ -1953,7 +1955,7 @@ public void toFront() {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         blackKeyLabels.add(Csharp6, gridBagConstraints);
 
-        Eb6.setText(" Eb");
+        Eb6.setText(bundle.getString("VoicingKeyboard.Eb6.text")); // NOI18N
         Eb6.setMaximumSize(new java.awt.Dimension(30, 14));
         Eb6.setMinimumSize(new java.awt.Dimension(30, 14));
         Eb6.setPreferredSize(new java.awt.Dimension(30, 14));
@@ -1964,7 +1966,7 @@ public void toFront() {
         blackKeyLabels.add(Eb6, gridBagConstraints);
 
         Fsharp6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        Fsharp6.setText("F#");
+        Fsharp6.setText(bundle.getString("VoicingKeyboard.Fsharp6.text")); // NOI18N
         Fsharp6.setMaximumSize(new java.awt.Dimension(27, 14));
         Fsharp6.setMinimumSize(new java.awt.Dimension(27, 14));
         Fsharp6.setPreferredSize(new java.awt.Dimension(27, 14));
@@ -1975,7 +1977,7 @@ public void toFront() {
         blackKeyLabels.add(Fsharp6, gridBagConstraints);
 
         Gsharp6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Gsharp6.setText("G#");
+        Gsharp6.setText(bundle.getString("VoicingKeyboard.Gsharp6.text")); // NOI18N
         Gsharp6.setMaximumSize(new java.awt.Dimension(26, 14));
         Gsharp6.setMinimumSize(new java.awt.Dimension(26, 14));
         Gsharp6.setPreferredSize(new java.awt.Dimension(26, 14));
@@ -1985,7 +1987,7 @@ public void toFront() {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         blackKeyLabels.add(Gsharp6, gridBagConstraints);
 
-        Bb6.setText("Bb");
+        Bb6.setText(bundle.getString("VoicingKeyboard.Bb6.text")); // NOI18N
         Bb6.setMaximumSize(new java.awt.Dimension(27, 14));
         Bb6.setMinimumSize(new java.awt.Dimension(27, 14));
         Bb6.setPreferredSize(new java.awt.Dimension(27, 14));
@@ -1996,7 +1998,7 @@ public void toFront() {
         blackKeyLabels.add(Bb6, gridBagConstraints);
 
         Csharp7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        Csharp7.setText("C#");
+        Csharp7.setText(bundle.getString("VoicingKeyboard.Csharp7.text")); // NOI18N
         Csharp7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Csharp7.setMaximumSize(new java.awt.Dimension(30, 14));
         Csharp7.setMinimumSize(new java.awt.Dimension(30, 14));
@@ -2007,7 +2009,7 @@ public void toFront() {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         blackKeyLabels.add(Csharp7, gridBagConstraints);
 
-        Eb7.setText(" Eb");
+        Eb7.setText(bundle.getString("VoicingKeyboard.Eb7.text")); // NOI18N
         Eb7.setMaximumSize(new java.awt.Dimension(30, 14));
         Eb7.setMinimumSize(new java.awt.Dimension(30, 14));
         Eb7.setPreferredSize(new java.awt.Dimension(30, 14));
@@ -2018,7 +2020,7 @@ public void toFront() {
         blackKeyLabels.add(Eb7, gridBagConstraints);
 
         Fsharp7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        Fsharp7.setText("F#");
+        Fsharp7.setText(bundle.getString("VoicingKeyboard.Fsharp7.text")); // NOI18N
         Fsharp7.setMaximumSize(new java.awt.Dimension(27, 14));
         Fsharp7.setMinimumSize(new java.awt.Dimension(27, 14));
         Fsharp7.setPreferredSize(new java.awt.Dimension(27, 14));
@@ -2029,7 +2031,7 @@ public void toFront() {
         blackKeyLabels.add(Fsharp7, gridBagConstraints);
 
         Gsharp7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Gsharp7.setText("G#");
+        Gsharp7.setText(bundle.getString("VoicingKeyboard.Gsharp7.text")); // NOI18N
         Gsharp7.setMaximumSize(new java.awt.Dimension(26, 14));
         Gsharp7.setMinimumSize(new java.awt.Dimension(26, 14));
         Gsharp7.setPreferredSize(new java.awt.Dimension(26, 14));
@@ -2039,7 +2041,7 @@ public void toFront() {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         blackKeyLabels.add(Gsharp7, gridBagConstraints);
 
-        Bb7.setText("Bb");
+        Bb7.setText(bundle.getString("VoicingKeyboard.Bb7.text")); // NOI18N
         Bb7.setMaximumSize(new java.awt.Dimension(27, 14));
         Bb7.setMinimumSize(new java.awt.Dimension(27, 14));
         Bb7.setPreferredSize(new java.awt.Dimension(27, 14));
@@ -2073,10 +2075,10 @@ public void toFront() {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         getContentPane().add(keyNamesPanel, gridBagConstraints);
 
-        optionsMenu.setText("Options");
+        optionsMenu.setText(bundle.getString("VoicingKeyboard.optionsMenu.text")); // NOI18N
 
         clearKeyboardMI.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, 0));
-        clearKeyboardMI.setText("Clear Keyboard");
+        clearKeyboardMI.setText(bundle.getString("VoicingKeyboard.clearKeyboardMI.text")); // NOI18N
         clearKeyboardMI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearKeyboardMIActionPerformed(evt);
@@ -2085,7 +2087,7 @@ public void toFront() {
         optionsMenu.add(clearKeyboardMI);
 
         resetChordDisplayMI.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_X, 0));
-        resetChordDisplayMI.setText("Reset Chord Display");
+        resetChordDisplayMI.setText(bundle.getString("VoicingKeyboard.resetChordDisplayMI.text")); // NOI18N
         resetChordDisplayMI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 resetChordDisplayMIActionPerformed(evt);
@@ -2094,7 +2096,7 @@ public void toFront() {
         optionsMenu.add(resetChordDisplayMI);
 
         playChordMI.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, 0));
-        playChordMI.setText("Play Chord");
+        playChordMI.setText(bundle.getString("VoicingKeyboard.playChordMI.text")); // NOI18N
         playChordMI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 playChordMIActionPerformed(evt);
@@ -2103,7 +2105,7 @@ public void toFront() {
         optionsMenu.add(playChordMI);
 
         addToSequenceMI.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, 0));
-        addToSequenceMI.setText("Add to Sequence");
+        addToSequenceMI.setText(bundle.getString("VoicingKeyboard.addToSequenceMI.text")); // NOI18N
         addToSequenceMI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addToSequenceMIActionPerformed(evt);
@@ -2113,7 +2115,7 @@ public void toFront() {
 
         turnOnOffKeyLabelsMI.setBackground(new java.awt.Color(230, 230, 230));
         turnOnOffKeyLabelsMI.setSelected(true);
-        turnOnOffKeyLabelsMI.setText("Turn On/Off Key Labels");
+        turnOnOffKeyLabelsMI.setText(bundle.getString("VoicingKeyboard.turnOnOffKeyLabelsMI.text")); // NOI18N
         turnOnOffKeyLabelsMI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 turnOnOffKeyLabelsMIActionPerformed(evt);
@@ -2123,10 +2125,10 @@ public void toFront() {
 
         jMenuBar1.add(optionsMenu);
 
-        voicingModeMenu.setText("Mode");
+        voicingModeMenu.setText(bundle.getString("VoicingKeyboard.voicingModeMenu.text")); // NOI18N
 
         singleNoteModeMI.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_1, 0));
-        singleNoteModeMI.setText("Single Note");
+        singleNoteModeMI.setText(bundle.getString("VoicingKeyboard.singleNoteModeMI.text")); // NOI18N
         singleNoteModeMI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 singleNoteModeMIActionPerformed(evt);
@@ -2135,7 +2137,7 @@ public void toFront() {
         voicingModeMenu.add(singleNoteModeMI);
 
         chordModeMI.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_2, 0));
-        chordModeMI.setText("Chords");
+        chordModeMI.setText(bundle.getString("VoicingKeyboard.chordModeMI.text")); // NOI18N
         chordModeMI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chordModeMIActionPerformed(evt);
@@ -2145,11 +2147,11 @@ public void toFront() {
 
         jMenuBar1.add(voicingModeMenu);
 
-        voicingTransposeMenu.setText("Transpose");
+        voicingTransposeMenu.setText(bundle.getString("VoicingKeyboard.voicingTransposeMenu.text")); // NOI18N
 
         upHalfStepMI.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, 0));
         upHalfStepMI.setBackground(new java.awt.Color(236, 233, 216));
-        upHalfStepMI.setText("Up half step");
+        upHalfStepMI.setText(bundle.getString("VoicingKeyboard.upHalfStepMI.text")); // NOI18N
         upHalfStepMI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 upHalfStepMIActionPerformed(evt);
@@ -2159,7 +2161,7 @@ public void toFront() {
 
         downHalfStepMI.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, 0));
         downHalfStepMI.setBackground(new java.awt.Color(236, 233, 216));
-        downHalfStepMI.setText("Down half step");
+        downHalfStepMI.setText(bundle.getString("VoicingKeyboard.downHalfStepMI.text")); // NOI18N
         downHalfStepMI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 downHalfStepMIActionPerformed(evt);
@@ -2170,7 +2172,7 @@ public void toFront() {
 
         upOctaveMI.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, 0));
         upOctaveMI.setBackground(new java.awt.Color(236, 233, 216));
-        upOctaveMI.setText("Up octave");
+        upOctaveMI.setText(bundle.getString("VoicingKeyboard.upOctaveMI.text")); // NOI18N
         upOctaveMI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 upOctaveMIActionPerformed(evt);
@@ -2180,7 +2182,7 @@ public void toFront() {
 
         downOctaveMI.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, 0));
         downOctaveMI.setBackground(new java.awt.Color(236, 233, 216));
-        downOctaveMI.setText("Down octave");
+        downOctaveMI.setText(bundle.getString("VoicingKeyboard.downOctaveMI.text")); // NOI18N
         downOctaveMI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 downOctaveMIActionPerformed(evt);
@@ -2190,10 +2192,10 @@ public void toFront() {
 
         jMenuBar1.add(voicingTransposeMenu);
 
-        playbackMenu.setText("Playback");
+        playbackMenu.setText(bundle.getString("VoicingKeyboard.playbackMenu.text")); // NOI18N
 
         startPlayMI.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, 0));
-        startPlayMI.setText("Start play");
+        startPlayMI.setText(bundle.getString("VoicingKeyboard.startPlayMI.text")); // NOI18N
         startPlayMI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 startPlayMIActionPerformed(evt);
@@ -2202,7 +2204,7 @@ public void toFront() {
         playbackMenu.add(startPlayMI);
 
         pausePlayMI.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, 0));
-        pausePlayMI.setText("Pause play");
+        pausePlayMI.setText(bundle.getString("VoicingKeyboard.pausePlayMI.text")); // NOI18N
         pausePlayMI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pausePlayMIActionPerformed(evt);
@@ -2211,7 +2213,7 @@ public void toFront() {
         playbackMenu.add(pausePlayMI);
 
         stopPlayMI.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_K, 0));
-        stopPlayMI.setText("Stop play");
+        stopPlayMI.setText(bundle.getString("VoicingKeyboard.stopPlayMI.text")); // NOI18N
         stopPlayMI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 stopPlayMIActionPerformed(evt);
@@ -2220,7 +2222,7 @@ public void toFront() {
         playbackMenu.add(stopPlayMI);
 
         startSelPlayMI.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ENTER, 0));
-        startSelPlayMI.setText("Start selection play");
+        startSelPlayMI.setText(bundle.getString("VoicingKeyboard.startSelPlayMI.text")); // NOI18N
         startSelPlayMI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 startSelPlayMIActionPerformed(evt);
@@ -2228,8 +2230,8 @@ public void toFront() {
         });
         playbackMenu.add(startSelPlayMI);
 
-        stopSelPlayMI.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ENTER, java.awt.event.InputEvent.SHIFT_MASK));
-        stopSelPlayMI.setText("Play from selection to end");
+        stopSelPlayMI.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ENTER, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        stopSelPlayMI.setText(bundle.getString("VoicingKeyboard.stopSelPlayMI.text")); // NOI18N
         stopSelPlayMI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 stopSelPlayMIActionPerformed(evt);
@@ -2240,7 +2242,7 @@ public void toFront() {
         jMenuBar1.add(playbackMenu);
 
         windowMenu.setMnemonic('W');
-        windowMenu.setText("Window");
+        windowMenu.setText(bundle.getString("VoicingKeyboard.windowMenu.text")); // NOI18N
         windowMenu.addMenuListener(new javax.swing.event.MenuListener() {
             public void menuSelected(javax.swing.event.MenuEvent evt) {
                 windowMenuMenuSelected(evt);
@@ -2252,8 +2254,8 @@ public void toFront() {
         });
 
         closeWindowMI.setMnemonic('C');
-        closeWindowMI.setText("Close Window");
-        closeWindowMI.setToolTipText("Closes the current window (exits program if there are no other windows)");
+        closeWindowMI.setText(bundle.getString("VoicingKeyboard.closeWindowMI.text")); // NOI18N
+        closeWindowMI.setToolTipText(bundle.getString("VoicingKeyboard.closeWindowMI.toolTipText")); // NOI18N
         closeWindowMI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 closeWindowMIActionPerformed(evt);
@@ -2262,7 +2264,7 @@ public void toFront() {
         windowMenu.add(closeWindowMI);
 
         cascadeMI.setMnemonic('A');
-        cascadeMI.setText("Cascade Windows");
+        cascadeMI.setText(bundle.getString("VoicingKeyboard.cascadeMI.text")); // NOI18N
         cascadeMI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cascadeMIActionPerformed(evt);
