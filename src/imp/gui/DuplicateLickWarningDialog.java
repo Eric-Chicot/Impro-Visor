@@ -51,8 +51,7 @@ public class DuplicateLickWarningDialog extends javax.swing.JDialog
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
         duplicateLickLabel = new javax.swing.JLabel();
@@ -66,8 +65,9 @@ public class DuplicateLickWarningDialog extends javax.swing.JDialog
 
         duplicateLickLabel.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         duplicateLickLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        duplicateLickLabel.setText("Warning: Duplicate Lick");
-        duplicateLickLabel.setToolTipText("");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
+        duplicateLickLabel.setText(bundle.getString("DuplicateLickWarningDialog.duplicateLickLabel.text")); // NOI18N
+        duplicateLickLabel.setToolTipText(bundle.getString("DuplicateLickWarningDialog.duplicateLickLabel.toolTipText")); // NOI18N
         duplicateLickLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -98,15 +98,12 @@ public class DuplicateLickWarningDialog extends javax.swing.JDialog
         getContentPane().add(duplicateLickScroll, gridBagConstraints);
 
         saveDuplicate.setBackground(java.awt.Color.yellow);
-        saveDuplicate.setText("Save This Anyway");
-        saveDuplicate.setToolTipText("Saves the lick in the vocabulary");
+        saveDuplicate.setText(bundle.getString("DuplicateLickWarningDialog.saveDuplicate.text")); // NOI18N
+        saveDuplicate.setToolTipText(bundle.getString("DuplicateLickWarningDialog.saveDuplicate.toolTipText")); // NOI18N
         saveDuplicate.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         saveDuplicate.setDefaultCapable(false);
-        saveDuplicate.setOpaque(true);
-        saveDuplicate.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        saveDuplicate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveDuplicateActionPerformed(evt);
             }
         });
@@ -122,14 +119,11 @@ public class DuplicateLickWarningDialog extends javax.swing.JDialog
         getContentPane().add(saveDuplicate, gridBagConstraints);
 
         ignoreDuplicate.setBackground(java.awt.Color.green);
-        ignoreDuplicate.setText("Ignore This One");
-        ignoreDuplicate.setToolTipText("Do not save the duplicate in the vocabulary.");
+        ignoreDuplicate.setText(bundle.getString("DuplicateLickWarningDialog.ignoreDuplicate.text")); // NOI18N
+        ignoreDuplicate.setToolTipText(bundle.getString("DuplicateLickWarningDialog.ignoreDuplicate.toolTipText")); // NOI18N
         ignoreDuplicate.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ignoreDuplicate.setOpaque(true);
-        ignoreDuplicate.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        ignoreDuplicate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ignoreDuplicateActionPerformed(evt);
             }
         });

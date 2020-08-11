@@ -50,7 +50,8 @@ public ErrorDialogNonModal(boolean modal)
         errorText = new javax.swing.JTextPane();
         okErrorBtn = new javax.swing.JButton();
 
-        setTitle("Explanation of Error");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
+        setTitle(bundle.getString("ErrorDialogNonModal.title")); // NOI18N
         setAlwaysOnTop(true);
         setBackground(new java.awt.Color(255, 255, 102));
         getContentPane().setLayout(new java.awt.GridBagLayout());
@@ -75,10 +76,9 @@ public ErrorDialogNonModal(boolean modal)
         getContentPane().add(errorScroll, gridBagConstraints);
 
         okErrorBtn.setBackground(new java.awt.Color(0, 255, 0));
-        okErrorBtn.setText("OK");
+        okErrorBtn.setText(bundle.getString("ErrorDialogNonModal.okErrorBtn.text")); // NOI18N
         okErrorBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         okErrorBtn.setMinimumSize(new java.awt.Dimension(400, 20));
-        okErrorBtn.setOpaque(true);
         okErrorBtn.setPreferredSize(new java.awt.Dimension(400, 20));
         okErrorBtn.setSelected(true);
         okErrorBtn.addActionListener(new java.awt.event.ActionListener() {

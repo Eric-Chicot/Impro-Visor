@@ -55,7 +55,8 @@ public ErrorDialogWithResponse(boolean modal)
         abortErrorBtn = new javax.swing.JButton();
         okErrorBtn = new javax.swing.JButton();
 
-        setTitle("Error or Warning");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
+        setTitle(bundle.getString("ErrorDialogWithResponse.title")); // NOI18N
         setAlwaysOnTop(true);
         setBackground(new java.awt.Color(255, 255, 102));
         setModal(true);
@@ -81,10 +82,9 @@ public ErrorDialogWithResponse(boolean modal)
         getContentPane().add(errorScroll, gridBagConstraints);
 
         abortErrorBtn.setBackground(new java.awt.Color(51, 255, 0));
-        abortErrorBtn.setText("Bypass current activity");
+        abortErrorBtn.setText(bundle.getString("ErrorDialogWithResponse.abortErrorBtn.text")); // NOI18N
         abortErrorBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         abortErrorBtn.setMinimumSize(new java.awt.Dimension(400, 20));
-        abortErrorBtn.setOpaque(true);
         abortErrorBtn.setPreferredSize(new java.awt.Dimension(400, 20));
         abortErrorBtn.setSelected(true);
         abortErrorBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -105,11 +105,10 @@ public ErrorDialogWithResponse(boolean modal)
         getContentPane().add(abortErrorBtn, gridBagConstraints);
 
         okErrorBtn.setBackground(new java.awt.Color(255, 204, 0));
-        okErrorBtn.setText("Continue at your own risk.");
-        okErrorBtn.setActionCommand("Continue at your own risk");
+        okErrorBtn.setText(bundle.getString("ErrorDialogWithResponse.okErrorBtn.text")); // NOI18N
+        okErrorBtn.setActionCommand(bundle.getString("ErrorDialogWithResponse.okErrorBtn.actionCommand")); // NOI18N
         okErrorBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         okErrorBtn.setMinimumSize(new java.awt.Dimension(400, 20));
-        okErrorBtn.setOpaque(true);
         okErrorBtn.setPreferredSize(new java.awt.Dimension(400, 20));
         okErrorBtn.setSelected(true);
         okErrorBtn.addActionListener(new java.awt.event.ActionListener() {
