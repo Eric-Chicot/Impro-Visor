@@ -21,6 +21,7 @@
 package imp.gui;
 
 import java.awt.Color;
+import java.util.ResourceBundle;
 
 /**
  *
@@ -30,6 +31,7 @@ import java.awt.Color;
 public class GrammarMenuDialog extends javax.swing.JDialog
   {
   Notate notate;
+  private ResourceBundle bundle2 = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
   javax.swing.DefaultListModel grammarListModel = new javax.swing.DefaultListModel();
   
   String currentSelection;
@@ -49,7 +51,7 @@ public class GrammarMenuDialog extends javax.swing.JDialog
     {
         super(notate, modal);
         initComponents();
-        this.setTitle("Choose Grammar");
+        this.setTitle(bundle2.getString("GrammarMenuDialog.title"));
         this.notate = notate;
     }
 
@@ -93,8 +95,7 @@ public class GrammarMenuDialog extends javax.swing.JDialog
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
         grammarButtonGroup = new javax.swing.ButtonGroup();
@@ -115,11 +116,10 @@ public class GrammarMenuDialog extends javax.swing.JDialog
 
         grammarButtonGroup.add(chosenGrammarButton);
         chosenGrammarButton.setSelected(true);
-        chosenGrammarButton.setText("Chosen");
-        chosenGrammarButton.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
+        chosenGrammarButton.setText(bundle.getString("GrammarMenuDialog.chosenGrammarButton.text")); // NOI18N
+        chosenGrammarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chosenGrammarButtonActionPerformed(evt);
             }
         });
@@ -129,11 +129,9 @@ public class GrammarMenuDialog extends javax.swing.JDialog
         grammarButtonPanel.add(chosenGrammarButton, gridBagConstraints);
 
         grammarButtonGroup.add(cycleGrammarButton);
-        cycleGrammarButton.setLabel("Cycle");
-        cycleGrammarButton.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        cycleGrammarButton.setLabel(bundle.getString("GrammarMenuDialog.cycleGrammarButton.label")); // NOI18N
+        cycleGrammarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cycleGrammarButtonActionPerformed(evt);
             }
         });
@@ -143,11 +141,9 @@ public class GrammarMenuDialog extends javax.swing.JDialog
         grammarButtonPanel.add(cycleGrammarButton, gridBagConstraints);
 
         grammarButtonGroup.add(shuffleGrammarButton);
-        shuffleGrammarButton.setLabel("Shuffle");
-        shuffleGrammarButton.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        shuffleGrammarButton.setLabel(bundle.getString("GrammarMenuDialog.shuffleGrammarButton.label")); // NOI18N
+        shuffleGrammarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 shuffleGrammarButtonActionPerformed(evt);
             }
         });
@@ -157,22 +153,19 @@ public class GrammarMenuDialog extends javax.swing.JDialog
         grammarButtonPanel.add(shuffleGrammarButton, gridBagConstraints);
 
         improviseButton.setBackground(new java.awt.Color(0, 255, 0));
-        improviseButton.setText("Improv");
-        improviseButton.setToolTipText("Press to start improvisation.");
+        improviseButton.setText(bundle.getString("GrammarMenuDialog.improviseButton.text")); // NOI18N
+        improviseButton.setToolTipText(bundle.getString("GrammarMenuDialog.improviseButton.toolTipText")); // NOI18N
         improviseButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         improviseButton.setFocusable(false);
         improviseButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         improviseButton.setIconTextGap(0);
         improviseButton.setMaximumSize(new java.awt.Dimension(50, 30));
         improviseButton.setMinimumSize(new java.awt.Dimension(50, 30));
-        improviseButton.setOpaque(true);
         improviseButton.setPreferredSize(new java.awt.Dimension(50, 30));
         improviseButton.setRequestFocusEnabled(false);
         improviseButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        improviseButton.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        improviseButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 improviseButtonActionPerformed(evt);
             }
         });
@@ -192,23 +185,19 @@ public class GrammarMenuDialog extends javax.swing.JDialog
         grammarListScrollPane.setMinimumSize(new java.awt.Dimension(300, 100));
         grammarListScrollPane.setName("Grammar Menu"); // NOI18N
         grammarListScrollPane.setPreferredSize(new java.awt.Dimension(300, 600));
-        grammarListScrollPane.setViewportView(grammarJlist);
 
         grammarJlist.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         grammarJlist.setModel(grammarListModel);
         grammarJlist.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        grammarJlist.setToolTipText("");
-        grammarJlist.setBounds(new java.awt.Rectangle(0, 0, 300, 600));
+        grammarJlist.setToolTipText(bundle.getString("GrammarMenuDialog.grammarJlist.toolTipText")); // NOI18N
         grammarJlist.setVisibleRowCount(200);
-        grammarJlist.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        grammarJlist.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 grammarJlistMouseClicked(evt);
             }
         });
         grammarListScrollPane.setViewportView(grammarJlist);
-        grammarJlist.getAccessibleContext().setAccessibleName("");
+        grammarJlist.getAccessibleContext().setAccessibleName(bundle.getString("GrammarMenuDialog.grammarJlist.AccessibleContext.accessibleName")); // NOI18N
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
