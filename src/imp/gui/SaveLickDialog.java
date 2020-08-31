@@ -59,8 +59,7 @@ public class SaveLickDialog extends javax.swing.JDialog
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
         saveLickButtonGroup = new javax.swing.ButtonGroup();
@@ -84,7 +83,8 @@ public class SaveLickDialog extends javax.swing.JDialog
 
         lickTItleLabel.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         lickTItleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lickTItleLabel.setText("Save Selection in Vocabulary as ...");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("imp/internationalize/Bundle"); // NOI18N
+        lickTItleLabel.setText(bundle.getString("SaveLickDialog.lickTItleLabel.text")); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -96,22 +96,18 @@ public class SaveLickDialog extends javax.swing.JDialog
         getContentPane().add(lickTItleLabel, gridBagConstraints);
 
         enterLickTitle.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        enterLickTitle.setText("unnamed");
-        enterLickTitle.setToolTipText("The name to be given to the selection (need not be unique)");
+        enterLickTitle.setText(bundle.getString("SaveLickDialog.enterLickTitle.text")); // NOI18N
+        enterLickTitle.setToolTipText(bundle.getString("SaveLickDialog.enterLickTitle.toolTipText")); // NOI18N
         enterLickTitle.setMaximumSize(new java.awt.Dimension(2147483647, 30));
         enterLickTitle.setMinimumSize(new java.awt.Dimension(200, 30));
         enterLickTitle.setPreferredSize(new java.awt.Dimension(400, 30));
-        enterLickTitle.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        enterLickTitle.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 enterLickTitleGetsFocus(evt);
             }
         });
-        enterLickTitle.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        enterLickTitle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 enterLickTitleActionPerformed(evt);
             }
         });
@@ -127,7 +123,7 @@ public class SaveLickDialog extends javax.swing.JDialog
 
         lineLabel.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         lineLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lineLabel.setText("Save with name: ");
+        lineLabel.setText(bundle.getString("SaveLickDialog.lineLabel.text")); // NOI18N
         lineLabel.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         lineLabel.setMaximumSize(new java.awt.Dimension(150, 30));
         lineLabel.setMinimumSize(new java.awt.Dimension(150, 30));
@@ -141,14 +137,11 @@ public class SaveLickDialog extends javax.swing.JDialog
         getContentPane().add(lineLabel, gridBagConstraints);
 
         cancelLickTitle.setBackground(java.awt.Color.red);
-        cancelLickTitle.setText("Cancel");
+        cancelLickTitle.setText(bundle.getString("SaveLickDialog.cancelLickTitle.text")); // NOI18N
         cancelLickTitle.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         cancelLickTitle.setDefaultCapable(false);
-        cancelLickTitle.setOpaque(true);
-        cancelLickTitle.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        cancelLickTitle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelLickTitleActionPerformed(evt);
             }
         });
@@ -164,15 +157,12 @@ public class SaveLickDialog extends javax.swing.JDialog
 
         okSaveButton.setBackground(java.awt.Color.green);
         okSaveButton.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        okSaveButton.setText("Save This");
-        okSaveButton.setToolTipText("Saves the item in the vocabulary file.");
+        okSaveButton.setText(bundle.getString("SaveLickDialog.okSaveButton.text")); // NOI18N
+        okSaveButton.setToolTipText(bundle.getString("SaveLickDialog.okSaveButton.toolTipText")); // NOI18N
         okSaveButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        okSaveButton.setOpaque(true);
         okSaveButton.setSelected(true);
-        okSaveButton.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        okSaveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 okSaveButtonActionPerformed(evt);
             }
         });
@@ -188,15 +178,13 @@ public class SaveLickDialog extends javax.swing.JDialog
 
         saveLickButtonGroup.add(rhythmRadioButton);
         rhythmRadioButton.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        rhythmRadioButton.setText("Rhythm");
-        rhythmRadioButton.setToolTipText("Save as rhythm when saving.");
+        rhythmRadioButton.setText(bundle.getString("SaveLickDialog.rhythmRadioButton.text")); // NOI18N
+        rhythmRadioButton.setToolTipText(bundle.getString("SaveLickDialog.rhythmRadioButton.toolTipText")); // NOI18N
         rhythmRadioButton.setMargin(new java.awt.Insets(1, 5, 0, 0));
         rhythmRadioButton.setMinimumSize(new java.awt.Dimension(150, 50));
         rhythmRadioButton.setPreferredSize(new java.awt.Dimension(150, 50));
-        rhythmRadioButton.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        rhythmRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rhythmRadioButtonActionPerformed(evt);
             }
         });
@@ -210,15 +198,13 @@ public class SaveLickDialog extends javax.swing.JDialog
 
         saveLickButtonGroup.add(cellRadioButton);
         cellRadioButton.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        cellRadioButton.setText("Cell");
-        cellRadioButton.setToolTipText("Save as cell when saving.");
+        cellRadioButton.setText(bundle.getString("SaveLickDialog.cellRadioButton.text")); // NOI18N
+        cellRadioButton.setToolTipText(bundle.getString("SaveLickDialog.cellRadioButton.toolTipText")); // NOI18N
         cellRadioButton.setMargin(new java.awt.Insets(1, 5, 0, 0));
         cellRadioButton.setMinimumSize(new java.awt.Dimension(150, 50));
         cellRadioButton.setPreferredSize(new java.awt.Dimension(150, 50));
-        cellRadioButton.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        cellRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cellRadioButtonActionPerformed(evt);
             }
         });
@@ -232,15 +218,13 @@ public class SaveLickDialog extends javax.swing.JDialog
 
         saveLickButtonGroup.add(idiomRadioButton);
         idiomRadioButton.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        idiomRadioButton.setText("Idiom");
-        idiomRadioButton.setToolTipText("Save as idiom when saving.");
+        idiomRadioButton.setText(bundle.getString("SaveLickDialog.idiomRadioButton.text")); // NOI18N
+        idiomRadioButton.setToolTipText(bundle.getString("SaveLickDialog.idiomRadioButton.toolTipText")); // NOI18N
         idiomRadioButton.setMargin(new java.awt.Insets(1, 5, 0, 0));
         idiomRadioButton.setMinimumSize(new java.awt.Dimension(150, 50));
         idiomRadioButton.setPreferredSize(new java.awt.Dimension(150, 50));
-        idiomRadioButton.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        idiomRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 idiomRadioButtonActionPerformed(evt);
             }
         });
@@ -255,15 +239,13 @@ public class SaveLickDialog extends javax.swing.JDialog
         saveLickButtonGroup.add(lickRadioButton);
         lickRadioButton.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         lickRadioButton.setSelected(true);
-        lickRadioButton.setText("Lick");
-        lickRadioButton.setToolTipText("Save as lick when saving.");
+        lickRadioButton.setText(bundle.getString("SaveLickDialog.lickRadioButton.text")); // NOI18N
+        lickRadioButton.setToolTipText(bundle.getString("SaveLickDialog.lickRadioButton.toolTipText")); // NOI18N
         lickRadioButton.setMargin(new java.awt.Insets(1, 5, 0, 0));
         lickRadioButton.setMinimumSize(new java.awt.Dimension(150, 50));
         lickRadioButton.setPreferredSize(new java.awt.Dimension(150, 50));
-        lickRadioButton.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        lickRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lickRadioButtonActionPerformed(evt);
             }
         });
@@ -277,15 +259,13 @@ public class SaveLickDialog extends javax.swing.JDialog
 
         saveLickButtonGroup.add(quoteRadioButton);
         quoteRadioButton.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        quoteRadioButton.setText("Quote");
-        quoteRadioButton.setToolTipText("Save as quote when saving.");
+        quoteRadioButton.setText(bundle.getString("SaveLickDialog.quoteRadioButton.text")); // NOI18N
+        quoteRadioButton.setToolTipText(bundle.getString("SaveLickDialog.quoteRadioButton.toolTipText")); // NOI18N
         quoteRadioButton.setMargin(new java.awt.Insets(1, 5, 0, 0));
         quoteRadioButton.setMinimumSize(new java.awt.Dimension(150, 50));
         quoteRadioButton.setPreferredSize(new java.awt.Dimension(150, 50));
-        quoteRadioButton.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        quoteRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 quoteRadioButtonActionPerformed(evt);
             }
         });
@@ -299,15 +279,13 @@ public class SaveLickDialog extends javax.swing.JDialog
 
         saveLickButtonGroup.add(brickRadioButton);
         brickRadioButton.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        brickRadioButton.setText("Brick");
-        brickRadioButton.setToolTipText("Save as brick when saving");
+        brickRadioButton.setText(bundle.getString("SaveLickDialog.brickRadioButton.text")); // NOI18N
+        brickRadioButton.setToolTipText(bundle.getString("SaveLickDialog.brickRadioButton.toolTipText")); // NOI18N
         brickRadioButton.setMargin(new java.awt.Insets(1, 5, 0, 0));
         brickRadioButton.setMinimumSize(new java.awt.Dimension(150, 50));
         brickRadioButton.setPreferredSize(new java.awt.Dimension(150, 50));
-        brickRadioButton.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        brickRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 brickRadioButtonActionPerformed(evt);
             }
         });
